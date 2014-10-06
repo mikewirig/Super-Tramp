@@ -1,0 +1,533 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F50E9BB319D2167800B3E0D7 /* VidCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50E9BB219D2167800B3E0D7 /* VidCell.swift */; };
+		F50E9BD119D32F1800B3E0D7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F50E9BD019D32F1800B3E0D7 /* AudioToolbox.framework */; };
+		F50E9BD519D32F3500B3E0D7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F50E9BD219D32F3500B3E0D7 /* CFNetwork.framework */; };
+		F50E9BD619D32F3500B3E0D7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F50E9BD319D32F3500B3E0D7 /* CoreGraphics.framework */; };
+		F50E9BD719D32F3500B3E0D7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F50E9BD419D32F3500B3E0D7 /* CoreLocation.framework */; };
+		F50E9BD919D32F5E00B3E0D7 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F50E9BD819D32F5E00B3E0D7 /* libz.dylib */; };
+		F50E9BDC19D32F7B00B3E0D7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F50E9BDA19D32F7B00B3E0D7 /* MobileCoreServices.framework */; };
+		F50E9BDD19D32F7B00B3E0D7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F50E9BDB19D32F7B00B3E0D7 /* QuartzCore.framework */; };
+		F50E9BE119D32F8F00B3E0D7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F50E9BDE19D32F8F00B3E0D7 /* Security.framework */; };
+		F50E9BE219D32F8F00B3E0D7 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F50E9BDF19D32F8F00B3E0D7 /* StoreKit.framework */; };
+		F50E9BE319D32F8F00B3E0D7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F50E9BE019D32F8F00B3E0D7 /* SystemConfiguration.framework */; };
+		F50E9BE719D32FBB00B3E0D7 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F50E9BE419D32FBB00B3E0D7 /* Bolts.framework */; };
+		F50E9BE819D32FBC00B3E0D7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F50E9BE519D32FBB00B3E0D7 /* Parse.framework */; };
+		F50E9BE919D32FBC00B3E0D7 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F50E9BE619D32FBB00B3E0D7 /* ParseFacebookUtils.framework */; };
+		F510EA9619CB6A3600C946B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F510EA9519CB6A3600C946B9 /* AppDelegate.swift */; };
+		F510EA9919CB6A3600C946B9 /* Devin_Supertramp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F510EA9719CB6A3600C946B9 /* Devin_Supertramp.xcdatamodeld */; };
+		F510EA9B19CB6A3600C946B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F510EA9A19CB6A3600C946B9 /* ViewController.swift */; };
+		F510EA9E19CB6A3600C946B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F510EA9C19CB6A3600C946B9 /* Main.storyboard */; };
+		F510EAA019CB6A3600C946B9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F510EA9F19CB6A3600C946B9 /* Images.xcassets */; };
+		F510EAA319CB6A3600C946B9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F510EAA119CB6A3600C946B9 /* LaunchScreen.xib */; };
+		F510EAAF19CB6A3600C946B9 /* Devin_SupertrampTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F510EAAE19CB6A3600C946B9 /* Devin_SupertrampTests.swift */; };
+		F510EABF19CB721600C946B9 /* VideosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F510EABE19CB721600C946B9 /* VideosController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F510EAA919CB6A3600C946B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F510EA8819CB6A3600C946B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F510EA8F19CB6A3600C946B9;
+			remoteInfo = "Devin Supertramp";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F50E9BB219D2167800B3E0D7 /* VidCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VidCell.swift; sourceTree = "<group>"; };
+		F50E9BD019D32F1800B3E0D7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F50E9BD219D32F3500B3E0D7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		F50E9BD319D32F3500B3E0D7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F50E9BD419D32F3500B3E0D7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F50E9BD819D32F5E00B3E0D7 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		F50E9BDA19D32F7B00B3E0D7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F50E9BDB19D32F7B00B3E0D7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F50E9BDE19D32F8F00B3E0D7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F50E9BDF19D32F8F00B3E0D7 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		F50E9BE019D32F8F00B3E0D7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F50E9BE419D32FBB00B3E0D7 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		F50E9BE519D32FBB00B3E0D7 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		F50E9BE619D32FBB00B3E0D7 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		F50E9BEA19D3303300B3E0D7 /* Devin Supertramp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Devin Supertramp-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		F510EA9019CB6A3600C946B9 /* Devin Supertramp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Devin Supertramp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F510EA9419CB6A3600C946B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F510EA9519CB6A3600C946B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F510EA9819CB6A3600C946B9 /* Devin_Supertramp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Devin_Supertramp.xcdatamodel; sourceTree = "<group>"; };
+		F510EA9A19CB6A3600C946B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F510EA9D19CB6A3600C946B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F510EA9F19CB6A3600C946B9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F510EAA219CB6A3600C946B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F510EAA819CB6A3600C946B9 /* Devin SupertrampTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Devin SupertrampTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F510EAAD19CB6A3600C946B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F510EAAE19CB6A3600C946B9 /* Devin_SupertrampTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Devin_SupertrampTests.swift; sourceTree = "<group>"; };
+		F510EABE19CB721600C946B9 /* VideosController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideosController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F510EA8D19CB6A3600C946B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F50E9BE119D32F8F00B3E0D7 /* Security.framework in Frameworks */,
+				F50E9BE219D32F8F00B3E0D7 /* StoreKit.framework in Frameworks */,
+				F50E9BE319D32F8F00B3E0D7 /* SystemConfiguration.framework in Frameworks */,
+				F50E9BDC19D32F7B00B3E0D7 /* MobileCoreServices.framework in Frameworks */,
+				F50E9BDD19D32F7B00B3E0D7 /* QuartzCore.framework in Frameworks */,
+				F50E9BD919D32F5E00B3E0D7 /* libz.dylib in Frameworks */,
+				F50E9BD519D32F3500B3E0D7 /* CFNetwork.framework in Frameworks */,
+				F50E9BD619D32F3500B3E0D7 /* CoreGraphics.framework in Frameworks */,
+				F50E9BE719D32FBB00B3E0D7 /* Bolts.framework in Frameworks */,
+				F50E9BD719D32F3500B3E0D7 /* CoreLocation.framework in Frameworks */,
+				F50E9BE819D32FBC00B3E0D7 /* Parse.framework in Frameworks */,
+				F50E9BD119D32F1800B3E0D7 /* AudioToolbox.framework in Frameworks */,
+				F50E9BE919D32FBC00B3E0D7 /* ParseFacebookUtils.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F510EAA519CB6A3600C946B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F50E9BED19D35DC700B3E0D7 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		F50E9BEE19D35DE100B3E0D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F50E9BDE19D32F8F00B3E0D7 /* Security.framework */,
+				F50E9BDF19D32F8F00B3E0D7 /* StoreKit.framework */,
+				F50E9BE019D32F8F00B3E0D7 /* SystemConfiguration.framework */,
+				F50E9BDA19D32F7B00B3E0D7 /* MobileCoreServices.framework */,
+				F50E9BDB19D32F7B00B3E0D7 /* QuartzCore.framework */,
+				F50E9BD819D32F5E00B3E0D7 /* libz.dylib */,
+				F50E9BE419D32FBB00B3E0D7 /* Bolts.framework */,
+				F50E9BE519D32FBB00B3E0D7 /* Parse.framework */,
+				F50E9BE619D32FBB00B3E0D7 /* ParseFacebookUtils.framework */,
+				F50E9BD219D32F3500B3E0D7 /* CFNetwork.framework */,
+				F50E9BD319D32F3500B3E0D7 /* CoreGraphics.framework */,
+				F50E9BD419D32F3500B3E0D7 /* CoreLocation.framework */,
+				F50E9BD019D32F1800B3E0D7 /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F510EA8719CB6A3600C946B9 = {
+			isa = PBXGroup;
+			children = (
+				F510EA9219CB6A3600C946B9 /* Devin Supertramp */,
+				F510EAAB19CB6A3600C946B9 /* Devin SupertrampTests */,
+				F510EA9119CB6A3600C946B9 /* Products */,
+				F50E9BEE19D35DE100B3E0D7 /* Frameworks */,
+				F50E9BED19D35DC700B3E0D7 /* Images */,
+			);
+			sourceTree = "<group>";
+		};
+		F510EA9119CB6A3600C946B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F510EA9019CB6A3600C946B9 /* Devin Supertramp.app */,
+				F510EAA819CB6A3600C946B9 /* Devin SupertrampTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F510EA9219CB6A3600C946B9 /* Devin Supertramp */ = {
+			isa = PBXGroup;
+			children = (
+				F510EA9519CB6A3600C946B9 /* AppDelegate.swift */,
+				F510EA9A19CB6A3600C946B9 /* ViewController.swift */,
+				F510EABE19CB721600C946B9 /* VideosController.swift */,
+				F50E9BB219D2167800B3E0D7 /* VidCell.swift */,
+				F50E9BEA19D3303300B3E0D7 /* Devin Supertramp-Bridging-Header.h */,
+				F510EA9C19CB6A3600C946B9 /* Main.storyboard */,
+				F510EA9F19CB6A3600C946B9 /* Images.xcassets */,
+				F510EAA119CB6A3600C946B9 /* LaunchScreen.xib */,
+				F510EA9719CB6A3600C946B9 /* Devin_Supertramp.xcdatamodeld */,
+				F510EA9319CB6A3600C946B9 /* Supporting Files */,
+			);
+			path = "Devin Supertramp";
+			sourceTree = "<group>";
+		};
+		F510EA9319CB6A3600C946B9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F510EA9419CB6A3600C946B9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F510EAAB19CB6A3600C946B9 /* Devin SupertrampTests */ = {
+			isa = PBXGroup;
+			children = (
+				F510EAAE19CB6A3600C946B9 /* Devin_SupertrampTests.swift */,
+				F510EAAC19CB6A3600C946B9 /* Supporting Files */,
+			);
+			path = "Devin SupertrampTests";
+			sourceTree = "<group>";
+		};
+		F510EAAC19CB6A3600C946B9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F510EAAD19CB6A3600C946B9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F510EA8F19CB6A3600C946B9 /* Devin Supertramp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F510EAB219CB6A3600C946B9 /* Build configuration list for PBXNativeTarget "Devin Supertramp" */;
+			buildPhases = (
+				F510EA8C19CB6A3600C946B9 /* Sources */,
+				F510EA8D19CB6A3600C946B9 /* Frameworks */,
+				F510EA8E19CB6A3600C946B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Devin Supertramp";
+			productName = "Devin Supertramp";
+			productReference = F510EA9019CB6A3600C946B9 /* Devin Supertramp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F510EAA719CB6A3600C946B9 /* Devin SupertrampTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F510EAB519CB6A3600C946B9 /* Build configuration list for PBXNativeTarget "Devin SupertrampTests" */;
+			buildPhases = (
+				F510EAA419CB6A3600C946B9 /* Sources */,
+				F510EAA519CB6A3600C946B9 /* Frameworks */,
+				F510EAA619CB6A3600C946B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F510EAAA19CB6A3600C946B9 /* PBXTargetDependency */,
+			);
+			name = "Devin SupertrampTests";
+			productName = "Devin SupertrampTests";
+			productReference = F510EAA819CB6A3600C946B9 /* Devin SupertrampTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F510EA8819CB6A3600C946B9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Michael Wirig";
+				TargetAttributes = {
+					F510EA8F19CB6A3600C946B9 = {
+						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = RQD945WE66;
+					};
+					F510EAA719CB6A3600C946B9 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = F510EA8F19CB6A3600C946B9;
+					};
+				};
+			};
+			buildConfigurationList = F510EA8B19CB6A3600C946B9 /* Build configuration list for PBXProject "Devin Supertramp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F510EA8719CB6A3600C946B9;
+			productRefGroup = F510EA9119CB6A3600C946B9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F510EA8F19CB6A3600C946B9 /* Devin Supertramp */,
+				F510EAA719CB6A3600C946B9 /* Devin SupertrampTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F510EA8E19CB6A3600C946B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F510EA9E19CB6A3600C946B9 /* Main.storyboard in Resources */,
+				F510EAA319CB6A3600C946B9 /* LaunchScreen.xib in Resources */,
+				F510EAA019CB6A3600C946B9 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F510EAA619CB6A3600C946B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F510EA8C19CB6A3600C946B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F50E9BB319D2167800B3E0D7 /* VidCell.swift in Sources */,
+				F510EA9B19CB6A3600C946B9 /* ViewController.swift in Sources */,
+				F510EA9619CB6A3600C946B9 /* AppDelegate.swift in Sources */,
+				F510EABF19CB721600C946B9 /* VideosController.swift in Sources */,
+				F510EA9919CB6A3600C946B9 /* Devin_Supertramp.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F510EAA419CB6A3600C946B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F510EAAF19CB6A3600C946B9 /* Devin_SupertrampTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F510EAAA19CB6A3600C946B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F510EA8F19CB6A3600C946B9 /* Devin Supertramp */;
+			targetProxy = F510EAA919CB6A3600C946B9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F510EA9C19CB6A3600C946B9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F510EA9D19CB6A3600C946B9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F510EAA119CB6A3600C946B9 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F510EAA219CB6A3600C946B9 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F510EAB019CB6A3600C946B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F510EAB119CB6A3600C946B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F510EAB319CB6A3600C946B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "Devin Supertramp/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Devin Supertramp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F510EAB419CB6A3600C946B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "Devin Supertramp/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Devin Supertramp-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		F510EAB619CB6A3600C946B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Devin SupertrampTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Devin Supertramp.app/Devin Supertramp";
+			};
+			name = Debug;
+		};
+		F510EAB719CB6A3600C946B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Devin SupertrampTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Devin Supertramp.app/Devin Supertramp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F510EA8B19CB6A3600C946B9 /* Build configuration list for PBXProject "Devin Supertramp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F510EAB019CB6A3600C946B9 /* Debug */,
+				F510EAB119CB6A3600C946B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F510EAB219CB6A3600C946B9 /* Build configuration list for PBXNativeTarget "Devin Supertramp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F510EAB319CB6A3600C946B9 /* Debug */,
+				F510EAB419CB6A3600C946B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F510EAB519CB6A3600C946B9 /* Build configuration list for PBXNativeTarget "Devin SupertrampTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F510EAB619CB6A3600C946B9 /* Debug */,
+				F510EAB719CB6A3600C946B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F510EA9719CB6A3600C946B9 /* Devin_Supertramp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F510EA9819CB6A3600C946B9 /* Devin_Supertramp.xcdatamodel */,
+			);
+			currentVersion = F510EA9819CB6A3600C946B9 /* Devin_Supertramp.xcdatamodel */;
+			path = Devin_Supertramp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F510EA8819CB6A3600C946B9 /* Project object */;
+}
