@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9FA4EEA2-AE13-44B8-9779-5C200E359733</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Devin Supertramp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>652D9084852F45AAB97DDCBBC7614AFE2818B4DD</key>
+		<string>https://github.com/mikewirig/Super-Tramp.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Devin Supertramp.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>652D9084852F45AAB97DDCBBC7614AFE2818B4DD</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mikewirig/Super-Tramp.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>652D9084852F45AAB97DDCBBC7614AFE2818B4DD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>652D9084852F45AAB97DDCBBC7614AFE2818B4DD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Super-Tramp</string>
+		</dict>
+	</array>
+</dict>
+</plist>
