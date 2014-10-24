@@ -22,6 +22,8 @@ class VideosController: UICollectionViewController {
     var dates = [String]()
     var youtubeIds = [String]()
     
+    var refresher = UIRefreshControl()
+    
 //    var images = [UIImage]()
     //    var favorites = [String]()
     //    var videos = [AnyObject]()
@@ -29,7 +31,18 @@ class VideosController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.updateView()
 
+        
+        refresher = UIRefreshControl()
+        refresher.attributedTitle = NSAttributedString(string: "Pull to Refresh")
+        refresher.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
+        self.collectionView.addSubview(refresher)
+    }
+    
+    func updateView() {
+        
         //PFRequest pulls all video objects
         var query = PFQuery(className:"Video")
         query.orderByDescending("uploadDate")
@@ -45,7 +58,7 @@ class VideosController: UICollectionViewController {
                 for object in objects {
                     var title = object["title"] as String
                     var dur = object["duration"] as String
-//                    var pic = object["pictures"] as UIImage
+                    //                    var pic = object["pictures"] as UIImage
                     var imageUrl = object["thumbnail"] as String
                     var date = object["timeElapsed"] as String
                     var id = object["youtubeId"] as String
@@ -56,7 +69,7 @@ class VideosController: UICollectionViewController {
                     self.imageUrls.append(imageUrl)
                     self.dates.append(date)
                     self.youtubeIds.append(id)
-//                    self.images.append(pic)
+                    //                    self.images.append(pic)
                     
                     self.collectionView.reloadData()
                 }
@@ -65,8 +78,17 @@ class VideosController: UICollectionViewController {
                 // Log details of the failure
                 NSLog("Error: %@ %@", error, error.userInfo!)
             }
+            
+            self.refresher.endRefreshing()
         }//end query
 
+    }
+    
+    func refresh() {
+        
+        self.updateView()
+        println("refreshed")
+        
     }
     
 
@@ -105,8 +127,8 @@ class VideosController: UICollectionViewController {
         
         cell.titleLabel.text = self.titles[indexPath.row]
         cell.durationLabel.text = self.durs[indexPath.row]
-        cell.thumbnailImageView.image = UIImage(named: "Placeholder")
-            cell.releaseDateLabel.text = self.dates[indexPath.row]
+        cell.thumbnailImageView.image = UIImage(named: "placeHolder-1")
+        cell.releaseDateLabel.text = self.dates[indexPath.row]
         cell.mediaPlayer.loadWithVideoId(self.youtubeIds[indexPath.row])
         
         
@@ -120,6 +142,7 @@ class VideosController: UICollectionViewController {
                 image = UIImage(data: NSData(contentsOfURL: NSURL(string:self.imageUrls[indexPath.row])!)!)
                 cell.thumbnailImageView.image = image;
                 self.imageCache.setValue(image, forKey:self.imageUrls[indexPath.row])
+
             })
 
         }

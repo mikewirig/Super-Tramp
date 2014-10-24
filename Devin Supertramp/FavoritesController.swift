@@ -114,6 +114,9 @@ class FavoritesController: UICollectionViewController {
         cell.thumbnailImageView.image = image
         
         if image == nil {
+            
+            
+            
             dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
                 
                 image = UIImage(data: NSData(contentsOfURL: NSURL(string:self.imageUrls[indexPath.row])!)!)
@@ -123,7 +126,7 @@ class FavoritesController: UICollectionViewController {
             })
             
         }
-        
+       
         cell.backgroundColor = UIColor.blackColor()
         return cell
         

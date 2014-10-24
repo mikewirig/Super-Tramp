@@ -12,6 +12,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="BdU-o3-Nxk">
                             <size key="itemSize" width="320" height="170"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -72,6 +73,9 @@
                                                 <action selector="share:" destination="2EE-R2-i6x" eventType="touchUpInside" id="5Pe-M0-dO5"/>
                                             </connections>
                                         </button>
+                                        <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="El2-cq-3Oj">
+                                            <rect key="frame" x="141" y="-32" width="39" height="37"/>
+                                        </pageControl>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
@@ -106,7 +110,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbP-FV-I0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="256" y="236"/>
+            <point key="canvasLocation" x="285" y="236"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MeI-QT-Jat">
