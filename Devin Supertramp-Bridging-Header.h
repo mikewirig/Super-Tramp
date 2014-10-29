@@ -3,3 +3,5 @@
 
 #import <Parse/Parse.h>
 #import <YTPlayerView.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <FacebookSDK/FacebookSDK.h>

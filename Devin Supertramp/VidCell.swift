@@ -35,5 +35,6 @@ class VidCell: UICollectionViewCell, YTPlayerViewDelegate {
     
     @IBAction func share(sender: AnyObject) {
         println("Shared \(self.titleLabel.text!)!")
+        
     }
 }

@@ -2,32 +2,40 @@
 //  FavoritesController.swift
 //  Devin Supertramp
 //
-//  Created by Michael Wirig on 10/22/14.
+//  Created by Michael Wirig on 10/28/14.
 //  Copyright (c) 2014 Michael Wirig. All rights reserved.
 //
 
 import UIKit
 
-let reuseId = "VidCell"
+
 
 class FavoritesController: UICollectionViewController {
 
-    
     var imageUrls = [String]()
     var titles = [String]()
     var imageCache = NSMutableDictionary()
     var durs = [String]()
     var dates = [String]()
     var youtubeIds = [String]()
-    //    var images = [UIImage]()
-    //    var favorites = [String]()
-    //    var videos = [AnyObject]()
+    var videoObjects = [AnyObject]()
+    var refresher = UIRefreshControl()
+    var url = NSURL()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.updateView()
         
+        //pull to refresh initialized
+        refresher = UIRefreshControl()
+        refresher.attributedTitle = NSAttributedString(string: "Pull to Refresh")
+        refresher.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
+        self.collectionView.addSubview(refresher)
+    }
+    
+    func updateView() {
         
         //PFRequest pulls all video objects
         var query = PFQuery(className:"Video")
@@ -38,23 +46,25 @@ class FavoritesController: UICollectionViewController {
             if error == nil {
                 
                 // The find succeeded.
-                NSLog("Successfully retrieved \(objects.count) videos.")
                 
-                // Do something with the found objects
+                NSLog("Successfully retrieved \(objects.count) videos.")
+                self.videoObjects = objects
+                
+                //Do something with the found objects
+                
                 for object in objects {
                     var title = object["title"] as String
                     var dur = object["duration"] as String
-                    //                    var pic = object["pictures"] as UIImage
                     var imageUrl = object["thumbnail"] as String
                     var date = object["timeElapsed"] as String
                     var id = object["youtubeId"] as String
+                    
                     
                     self.durs.append(dur)
                     self.titles.append(title)
                     self.imageUrls.append(imageUrl)
                     self.dates.append(date)
                     self.youtubeIds.append(id)
-                    //                    self.images.append(pic)
                     
                     self.collectionView.reloadData()
                 }
@@ -63,7 +73,16 @@ class FavoritesController: UICollectionViewController {
                 // Log details of the failure
                 NSLog("Error: %@ %@", error, error.userInfo!)
             }
+            
+            self.refresher.endRefreshing()
         }//end query
+        
+    }
+    
+    func refresh() {
+        
+        self.updateView()
+        println("refreshed")
         
     }
     
@@ -101,54 +120,28 @@ class FavoritesController: UICollectionViewController {
         
         // Configure the cell
         
-        
         cell.titleLabel.text = self.titles[indexPath.row]
         cell.durationLabel.text = self.durs[indexPath.row]
-        cell.thumbnailImageView.image = UIImage(named: "Placeholder")
         cell.releaseDateLabel.text = self.dates[indexPath.row]
         cell.mediaPlayer.loadWithVideoId(self.youtubeIds[indexPath.row])
         
+        self.url = NSURL(string: self.imageUrls[indexPath.row])!
+        cell.thumbnailImageView.sd_setImageWithURL(url)
         
-        var image:UIImage? = self.imageCache.valueForKey(self.imageUrls[indexPath.row]) as? UIImage
-        self.imageCache.setValue(image, forKey:self.imageUrls[indexPath.row])
-        cell.thumbnailImageView.image = image
-        
-        if image == nil {
-            
-            
-            
-            dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
-                
-                image = UIImage(data: NSData(contentsOfURL: NSURL(string:self.imageUrls[indexPath.row])!)!)
-                cell.thumbnailImageView.image = image;
-                self.imageCache.setValue(image, forKey:self.imageUrls[indexPath.row])
-                println(self.imageCache)
-            })
-            
-        }
-       
         cell.backgroundColor = UIColor.blackColor()
         return cell
         
         
     }
     
-    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        
-        
-        
-        println("cell \(indexPath.row)")
-        println(self.youtubeIds[indexPath.row])
-        
-    }
+    //    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
     
-    @IBAction func favoriteVideo(sender: AnyObject) {
-        println("favorited")
-    }
     
-    @IBAction func shareVideo(sender: AnyObject) {
-        println("Shared")
-    }
+    
+    //        println("cell \(indexPath.row)")
+    //        println(self.youtubeIds[indexPath.row])
+    
+    //    }
     
     // MARK: UICollectionViewDelegate
     

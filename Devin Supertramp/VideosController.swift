@@ -13,20 +13,15 @@ let reuseIdentifier = "VidCell"
 
 class VideosController: UICollectionViewController {
     
-   
-    
     var imageUrls = [String]()
     var titles = [String]()
     var imageCache = NSMutableDictionary()
     var durs = [String]()
     var dates = [String]()
     var youtubeIds = [String]()
-    
+    var videoObjects = [AnyObject]()
     var refresher = UIRefreshControl()
-    
-//    var images = [UIImage]()
-    //    var favorites = [String]()
-    //    var videos = [AnyObject]()
+    var url = NSURL()
     
 
     override func viewDidLoad() {
@@ -34,7 +29,7 @@ class VideosController: UICollectionViewController {
         
         self.updateView()
 
-        
+        //pull to refresh initialized
         refresher = UIRefreshControl()
         refresher.attributedTitle = NSAttributedString(string: "Pull to Refresh")
         refresher.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
@@ -53,8 +48,8 @@ class VideosController: UICollectionViewController {
                 
                 // The find succeeded.
                 NSLog("Successfully retrieved \(objects.count) videos.")
-                
-                // Do something with the found objects
+                self.videoObjects = objects
+//                 Do something with the found objects
                 for object in objects {
                     var title = object["title"] as String
                     var dur = object["duration"] as String
@@ -127,26 +122,12 @@ class VideosController: UICollectionViewController {
         
         cell.titleLabel.text = self.titles[indexPath.row]
         cell.durationLabel.text = self.durs[indexPath.row]
-        cell.thumbnailImageView.image = UIImage(named: "placeHolder-1")
         cell.releaseDateLabel.text = self.dates[indexPath.row]
         cell.mediaPlayer.loadWithVideoId(self.youtubeIds[indexPath.row])
+       
+        self.url = NSURL(string: self.imageUrls[indexPath.row])!
+        cell.thumbnailImageView.sd_setImageWithURL(url)
         
-        
-        var image:UIImage? = self.imageCache.valueForKey(self.imageUrls[indexPath.row]) as? UIImage
-        self.imageCache.setValue(image, forKey:self.imageUrls[indexPath.row])
-        cell.thumbnailImageView.image = image
-        
-        if image == nil {
-            dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
-        
-                image = UIImage(data: NSData(contentsOfURL: NSURL(string:self.imageUrls[indexPath.row])!)!)
-                cell.thumbnailImageView.image = image;
-                self.imageCache.setValue(image, forKey:self.imageUrls[indexPath.row])
-
-            })
-
-        }
-
         cell.backgroundColor = UIColor.blackColor()
         return cell
     
