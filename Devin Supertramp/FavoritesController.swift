@@ -123,7 +123,7 @@ class FavoritesController: UICollectionViewController {
         cell.titleLabel.text = self.titles[indexPath.row]
         cell.durationLabel.text = self.durs[indexPath.row]
         cell.releaseDateLabel.text = self.dates[indexPath.row]
-        cell.mediaPlayer.loadWithVideoId(self.youtubeIds[indexPath.row])
+//        cell.mediaPlayer.loadWithVideoId(self.youtubeIds[indexPath.row])
         
         self.url = NSURL(string: self.imageUrls[indexPath.row])!
         cell.thumbnailImageView.sd_setImageWithURL(url)

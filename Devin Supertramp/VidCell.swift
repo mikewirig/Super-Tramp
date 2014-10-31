@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VidCell: UICollectionViewCell, YTPlayerViewDelegate {
+class VidCell: UICollectionViewCell {
     
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -17,12 +17,10 @@ class VidCell: UICollectionViewCell, YTPlayerViewDelegate {
     @IBOutlet weak var thumbnailImageView: UIImageView!
     @IBOutlet weak var favoiteImage: UIButton!
    
-    @IBOutlet var mediaPlayer: YTPlayerView!
     
     override init() {
         super.init()
         
-        self.mediaPlayer.delegate = self
     }
     
     required init(coder aDecoder: NSCoder) {

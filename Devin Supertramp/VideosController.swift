@@ -11,7 +11,7 @@ import UIKit
 
 let reuseIdentifier = "VidCell"
 
-class VideosController: UICollectionViewController {
+class VideosController: UICollectionViewController, YTPlayerViewDelegate {
     
     var imageUrls = [String]()
     var titles = [String]()
@@ -23,10 +23,13 @@ class VideosController: UICollectionViewController {
     var refresher = UIRefreshControl()
     var url = NSURL()
     
+    @IBOutlet weak var mediaPlayer: YTPlayerView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.mediaPlayer.delegate = self
+        self.mediaPlayer.hidden = true
         self.updateView()
 
         //pull to refresh initialized
@@ -53,7 +56,6 @@ class VideosController: UICollectionViewController {
                 for object in objects {
                     var title = object["title"] as String
                     var dur = object["duration"] as String
-                    //                    var pic = object["pictures"] as UIImage
                     var imageUrl = object["thumbnail"] as String
                     var date = object["timeElapsed"] as String
                     var id = object["youtubeId"] as String
@@ -64,7 +66,6 @@ class VideosController: UICollectionViewController {
                     self.imageUrls.append(imageUrl)
                     self.dates.append(date)
                     self.youtubeIds.append(id)
-                    //                    self.images.append(pic)
                     
                     self.collectionView.reloadData()
                 }
@@ -123,7 +124,6 @@ class VideosController: UICollectionViewController {
         cell.titleLabel.text = self.titles[indexPath.row]
         cell.durationLabel.text = self.durs[indexPath.row]
         cell.releaseDateLabel.text = self.dates[indexPath.row]
-        cell.mediaPlayer.loadWithVideoId(self.youtubeIds[indexPath.row])
        
         self.url = NSURL(string: self.imageUrls[indexPath.row])!
         cell.thumbnailImageView.sd_setImageWithURL(url)
@@ -134,14 +134,23 @@ class VideosController: UICollectionViewController {
 
     }
     
-//    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
+        self.mediaPlayer.hidden = false
+        self.mediaPlayer.loadWithVideoId(self.youtubeIds[indexPath.row])
+        println("cell \(indexPath.row)")
+        println(self.youtubeIds[indexPath.row])
     
-//        println("cell \(indexPath.row)")
-//        println(self.youtubeIds[indexPath.row])
+    }
     
-//    }
+    func playerView(playerView: YTPlayerView!, didChangeToState state: YTPlayerState) {
+        println("Changed State")
+        
+    }
+    
+    func playerViewDidBecomeReady(playerView: YTPlayerView!) {
+        self.mediaPlayer.playVideo()
+    }
     
     // MARK: UICollectionViewDelegate
 

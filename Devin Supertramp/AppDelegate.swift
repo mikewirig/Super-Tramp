@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId("UyUNz0IPUJDGfZxqMv95L1NssCf92ijw6CPsTueo", clientKey:"SqA2BLaTyLXPDWpztr3HVXvoFtdcSTxYTexo4SVT")
         
         //set up View Controllers/layout
-        
+            
         return true
     }
 
