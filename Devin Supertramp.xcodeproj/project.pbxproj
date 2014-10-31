@@ -29,6 +29,8 @@
 		F510EAAF19CB6A3600C946B9 /* Devin_SupertrampTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F510EAAE19CB6A3600C946B9 /* Devin_SupertrampTests.swift */; };
 		F510EABF19CB721600C946B9 /* VideosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F510EABE19CB721600C946B9 /* VideosController.swift */; };
 		F5711DB019F568240041CBA9 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5711DAF19F568240041CBA9 /* Social.framework */; };
+		F57C64A21A0438D5006F3A68 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57C64A11A0438D5006F3A68 /* LoginViewController.swift */; };
+		F57C64A61A044739006F3A68 /* pageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57C64A51A044739006F3A68 /* pageViewController.swift */; };
 		F5B51CBA19F5B9600007B020 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B51CB919F5B9600007B020 /* Accounts.framework */; };
 		F5D2A9941A0012C600AE813E /* FavoritesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D2A9931A0012C600AE813E /* FavoritesController.swift */; };
 		F5E7A13319FA23E5007B435C /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5E7A13019FA23E5007B435C /* FacebookSDK.framework */; };
@@ -75,6 +77,8 @@
 		F510EAAE19CB6A3600C946B9 /* Devin_SupertrampTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Devin_SupertrampTests.swift; sourceTree = "<group>"; };
 		F510EABE19CB721600C946B9 /* VideosController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideosController.swift; sourceTree = "<group>"; };
 		F5711DAF19F568240041CBA9 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		F57C64A11A0438D5006F3A68 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F57C64A51A044739006F3A68 /* pageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pageViewController.swift; sourceTree = "<group>"; };
 		F5B51CB919F5B9600007B020 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		F5D2A9931A0012C600AE813E /* FavoritesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesController.swift; sourceTree = "<group>"; };
 		F5E7A13019FA23E5007B435C /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
@@ -181,9 +185,11 @@
 			isa = PBXGroup;
 			children = (
 				F510EA9519CB6A3600C946B9 /* AppDelegate.swift */,
+				F57C64A11A0438D5006F3A68 /* LoginViewController.swift */,
 				F510EABE19CB721600C946B9 /* VideosController.swift */,
 				F5D2A9931A0012C600AE813E /* FavoritesController.swift */,
 				F50E9BB219D2167800B3E0D7 /* VidCell.swift */,
+				F57C64A51A044739006F3A68 /* pageViewController.swift */,
 				F510EA9C19CB6A3600C946B9 /* Main.storyboard */,
 				F50E9BEA19D3303300B3E0D7 /* Devin Supertramp-Bridging-Header.h */,
 				F510EA9F19CB6A3600C946B9 /* Images.xcassets */,
@@ -356,8 +362,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F57C64A21A0438D5006F3A68 /* LoginViewController.swift in Sources */,
 				F50E9BB319D2167800B3E0D7 /* VidCell.swift in Sources */,
 				F510EA9619CB6A3600C946B9 /* AppDelegate.swift in Sources */,
+				F57C64A61A044739006F3A68 /* pageViewController.swift in Sources */,
 				F5D2A9941A0012C600AE813E /* FavoritesController.swift in Sources */,
 				F510EABF19CB721600C946B9 /* VideosController.swift in Sources */,
 				F510EA9919CB6A3600C946B9 /* Devin_Supertramp.xcdatamodeld in Sources */,

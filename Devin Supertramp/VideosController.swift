@@ -11,7 +11,7 @@ import UIKit
 
 let reuseIdentifier = "VidCell"
 
-class VideosController: UICollectionViewController, YTPlayerViewDelegate {
+class VideosController: UICollectionViewController, YTPlayerViewDelegate, UIPageViewControllerDelegate {
     
     var imageUrls = [String]()
     var titles = [String]()

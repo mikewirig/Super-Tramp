@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="R8f-Vd-AX0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sZr-zt-sFG">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
@@ -8,7 +8,7 @@
         <scene sceneID="CkO-K0-X3l">
             <objects>
                 <collectionViewController storyboardIdentifier="VideosController" title="Videos" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sZr-zt-sFG" customClass="VideosController" customModule="Devin_Supertramp" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="fG5-na-Q9d">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" dataMode="prototypes" id="fG5-na-Q9d">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -103,31 +103,58 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbP-FV-I0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1551" y="120"/>
+            <point key="canvasLocation" x="1090" y="120"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="38w-kB-bh1">
+        <!--Login View Controller-->
+        <scene sceneID="wPS-FA-EtX">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="R8f-Vd-AX0" sceneMemberID="viewController">
-                    <toolbarItems/>
+                <viewController id="Cbn-zE-itW" customClass="LoginViewController" customModule="Devin_Supertramp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WWe-xA-7xB"/>
+                        <viewControllerLayoutGuide type="bottom" id="hPI-li-ZIS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sKg-5H-joL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wY-ku-8vf">
+                                <rect key="frame" x="59" y="261" width="202" height="46"/>
+                                <state key="normal" image="facebooklogin">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="signIn:" destination="Cbn-zE-itW" eventType="touchUpInside" id="5m1-8o-CaH"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo-14" translatesAutoresizingMaskIntoConstraints="NO" id="zjk-eS-28Z">
+                                <rect key="frame" x="0.0" y="52" width="320" height="168"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" cyan="0.97999999999999998" magenta="0.69000000000000006" yellow="0.42999999999999999" black="0.31" alpha="0.89000000000000001" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nmx-d2-6YI">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="sZr-zt-sFG" kind="relationship" relationship="rootViewController" id="t6n-nX-rch"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="flJ-qi-GaA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ko7-MN-sjT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1104" y="120"/>
+            <point key="canvasLocation" x="739" y="-658"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="gWj-TB-38U">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="3zw-CS-8Qo" customClass="pageViewController" customModule="Devin_Supertramp" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TJS-py-ZSh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="597" y="120"/>
         </scene>
     </scenes>
     <resources>
         <image name="Favorite@0.5x" width="49" height="48"/>
         <image name="Share@0.5x" width="44" height="52"/>
-        <image name="blur@0.5x.png" width="320" height="97"/>
+        <image name="blur@0.5x.png" width="1" height="1"/>
+        <image name="facebooklogin" width="202" height="46"/>
+        <image name="logo-14" width="477" height="253"/>
     </resources>
 </document>
