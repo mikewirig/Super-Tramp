@@ -12,6 +12,8 @@ var sharedTitle = String()
 var sharedDate = String()
 var sharedImage = UIImage()
 var sharing = Bool()
+var sharedId = String()
+
 
 class VidCell: UICollectionViewCell {
     
@@ -23,11 +25,16 @@ class VidCell: UICollectionViewCell {
     @IBOutlet weak var thumbnailImageView: UIImageView!
     @IBOutlet weak var favoiteImage: UIButton!
     
+    
     @IBOutlet weak var shareTitleLabel: UILabel!
     @IBOutlet weak var shareImageView: UIImageView!
     
+    var cellVideoId = String()
+    
+    
     override init() {
         super.init()
+        
         
         self.shareView.center.x = self.center.x - 320
         self.shareView.center.y = self.center.y
@@ -57,20 +64,28 @@ class VidCell: UICollectionViewCell {
         sharedDate = self.releaseDateLabel.text!
         sharedImage = self.thumbnailImageView.image!
         //will also need video url as NSURL
+        sharedId = self.cellVideoId
+        
+        self.center.y = 64
+        
         
         //set the image and title outlets in the shareView
-        self.shareImageView.image = sharedImage
-        self.shareTitleLabel.text = sharedTitle
+        //self.shareImageView.image = sharedImage
+        //self.shareTitleLabel.text = sharedTitle
         
     }
-    //cancel the share
+    
+        //cancel the share
+    
     @IBAction func cancelShare(sender: AnyObject) {
         self.shareView.center.x = self.center.x - 320
         self.shareView.center.y = self.center.y
         self.shareView.hidden = true
         sharing = false
+    
     }
-
+    
+    
     @IBAction func facebookPressed(sender: AnyObject) {
         self.shareView.center.x = self.center.x - 320
         self.shareView.center.y = self.center.y
@@ -85,3 +100,4 @@ class VidCell: UICollectionViewCell {
         sharing = false
     }
 }
+

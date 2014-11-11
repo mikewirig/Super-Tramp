@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Z1V-uC-7U4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xON-8g-DaR">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
@@ -80,7 +80,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="178"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Stw-Rz-7sO">
-                                                    <rect key="frame" x="236" y="100" width="61" height="60"/>
+                                                    <rect key="frame" x="33" y="100" width="61" height="60"/>
                                                     <state key="normal" image="Facebook.png">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -90,7 +90,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MG0-4b-pAM">
-                                                    <rect key="frame" x="152" y="100" width="61" height="60"/>
+                                                    <rect key="frame" x="130" y="100" width="61" height="60"/>
                                                     <state key="normal" image="Twitter.png">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -99,12 +99,6 @@
                                                         <action selector="twitterShare:" destination="sZr-zt-sFG" eventType="touchUpInside" id="Hy9-mQ-Vnd"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7c-XL-gG1">
-                                                    <rect key="frame" x="8" y="2" width="267" height="60"/>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYr-V4-wxZ">
                                                     <rect key="frame" x="263" y="10" width="57" height="43"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
@@ -116,9 +110,15 @@
                                                         <action selector="cancelShare:" destination="2EE-R2-i6x" eventType="touchUpInside" id="uwI-Be-QLA"/>
                                                     </connections>
                                                 </button>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="slV-Af-K1w">
-                                                    <rect key="frame" x="8" y="80" width="120" height="90"/>
-                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v70-Gp-hDu">
+                                                    <rect key="frame" x="225" y="100" width="61" height="60"/>
+                                                    <state key="normal" image="Mail.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="sendEmail:" destination="U7L-eh-NX3" eventType="touchUpInside" id="zZb-ww-4B9"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
                                         </view>
@@ -130,8 +130,6 @@
                                     <outlet property="durationLabel" destination="Sgj-6y-8BI" id="Ux0-Nz-YFt"/>
                                     <outlet property="favoiteImage" destination="1hW-Op-wOj" id="aj8-EG-jyI"/>
                                     <outlet property="releaseDateLabel" destination="Bfz-dy-6xu" id="QZu-WK-zAx"/>
-                                    <outlet property="shareImageView" destination="slV-Af-K1w" id="GMx-Lf-Bc7"/>
-                                    <outlet property="shareTitleLabel" destination="D7c-XL-gG1" id="ouw-Ra-hnQ"/>
                                     <outlet property="shareView" destination="dMR-eW-dJb" id="Wrz-w1-kEA"/>
                                     <outlet property="thumbnailImageView" destination="s4t-E7-8Kc" id="xUC-Mf-x3D"/>
                                     <outlet property="titleLabel" destination="UdU-40-4xu" id="rBi-UX-6UE"/>
@@ -143,13 +141,7 @@
                             <outlet property="delegate" destination="sZr-zt-sFG" id="7Nh-5a-2r6"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Videos" id="6eq-Hm-EHw" colorLabel="IBBuiltInLabel-Blue">
-                        <barButtonItem key="rightBarButtonItem" title="Social" id="cdM-dt-aGq">
-                            <connections>
-                                <segue destination="U7L-eh-NX3" kind="show" id="49m-8H-agF"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Videos" id="6eq-Hm-EHw" colorLabel="IBBuiltInLabel-Blue"/>
                     <keyCommands/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
@@ -160,7 +152,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbP-FV-I0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1895" y="140"/>
+            <point key="canvasLocation" x="2721" y="-178"/>
         </scene>
         <!--Social-->
         <scene sceneID="tfT-uj-rvo">
@@ -279,7 +271,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qn-hF-q0Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2358" y="113"/>
+            <point key="canvasLocation" x="2752" y="473"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="wPS-FA-EtX">
@@ -313,12 +305,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ko7-MN-sjT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1056" y="113"/>
+            <point key="canvasLocation" x="649" y="113"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Videos-->
         <scene sceneID="LFe-eu-FRt">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Z1V-uC-7U4" sceneMemberID="viewController">
+                <navigationController title="Videos" automaticallyAdjustsScrollViewInsets="NO" id="Z1V-uC-7U4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Videos" id="4ta-6l-rqS"/>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="afv-Gz-NUg">
@@ -336,7 +329,51 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fvh-hb-p3C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1502" y="113"/>
+            <point key="canvasLocation" x="2307" y="-178"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Tpa-HF-vKS">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="xON-8g-DaR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Cj0-jR-Oyf">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.062745098039215685" green="0.23137254901960785" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Z1V-uC-7U4" kind="relationship" relationship="viewControllers" id="bmb-55-uuP"/>
+                        <segue destination="LOn-uV-RKD" kind="relationship" relationship="viewControllers" id="pWp-iP-P2V"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FdI-Kn-zVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1642" y="113"/>
+        </scene>
+        <!--Social-->
+        <scene sceneID="95J-07-sxs">
+            <objects>
+                <navigationController title="Social" automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnSwipe="YES" id="LOn-uV-RKD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Social" id="oHp-Dz-09n"/>
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rr6-lT-xCt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="U7L-eh-NX3" kind="relationship" relationship="rootViewController" id="tka-Zc-F79"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zC0-sX-o6J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2307" y="473"/>
         </scene>
     </scenes>
     <resources>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D3352381A11F81A00F9F998 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3352371A11F81A00F9F998 /* FacebookSDK.framework */; };
 		646E518C7A098880488A52A4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AECBEEDFE6EE1CB52F1B0C29 /* libPods.a */; };
 		F50E9BB319D2167800B3E0D7 /* VidCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50E9BB219D2167800B3E0D7 /* VidCell.swift */; };
 		F50E9BD119D32F1800B3E0D7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F50E9BD019D32F1800B3E0D7 /* AudioToolbox.framework */; };
@@ -51,8 +52,6 @@
 		F5D8C9D21A11C9D6004FDA7E /* Blogger.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D8C9C61A11C9D6004FDA7E /* Blogger.png */; };
 		F5D8C9D51A11CA2F004FDA7E /* socialBack.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D8C9D31A11CA2F004FDA7E /* socialBack.png */; };
 		F5D8C9D61A11CA2F004FDA7E /* socialBack@0.5x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D8C9D41A11CA2F004FDA7E /* socialBack@0.5x.png */; };
-		F5E7A13319FA23E5007B435C /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5E7A13019FA23E5007B435C /* FacebookSDK.framework */; };
-		F5E7A13419FA23E5007B435C /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5E7A13119FA23E5007B435C /* FBAudienceNetwork.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D3352371A11F81A00F9F998 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		34DEBA93AE6D4A833419BD80 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A59798C6433D7DAB48B3BF70 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AECBEEDFE6EE1CB52F1B0C29 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,8 +117,6 @@
 		F5D8C9C61A11C9D6004FDA7E /* Blogger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blogger.png; sourceTree = "<group>"; };
 		F5D8C9D31A11CA2F004FDA7E /* socialBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = socialBack.png; sourceTree = "<group>"; };
 		F5D8C9D41A11CA2F004FDA7E /* socialBack@0.5x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "socialBack@0.5x.png"; sourceTree = "<group>"; };
-		F5E7A13019FA23E5007B435C /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
-		F5E7A13119FA23E5007B435C /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBAudienceNetwork.framework; path = ../../FacebookSDK/FBAudienceNetwork/FBAudienceNetwork.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,13 +132,12 @@
 				F50E9BDC19D32F7B00B3E0D7 /* MobileCoreServices.framework in Frameworks */,
 				F50E9BDD19D32F7B00B3E0D7 /* QuartzCore.framework in Frameworks */,
 				F50E9BD919D32F5E00B3E0D7 /* libz.dylib in Frameworks */,
-				F5E7A13319FA23E5007B435C /* FacebookSDK.framework in Frameworks */,
-				F5E7A13419FA23E5007B435C /* FBAudienceNetwork.framework in Frameworks */,
 				F50E9BD519D32F3500B3E0D7 /* CFNetwork.framework in Frameworks */,
 				F50E9BD619D32F3500B3E0D7 /* CoreGraphics.framework in Frameworks */,
 				F50E9BD719D32F3500B3E0D7 /* CoreLocation.framework in Frameworks */,
 				F50E9BE819D32FBC00B3E0D7 /* Parse.framework in Frameworks */,
 				F50E9BD119D32F1800B3E0D7 /* AudioToolbox.framework in Frameworks */,
+				1D3352381A11F81A00F9F998 /* FacebookSDK.framework in Frameworks */,
 				F50E9BE919D32FBC00B3E0D7 /* ParseFacebookUtils.framework in Frameworks */,
 				646E518C7A098880488A52A4 /* libPods.a in Frameworks */,
 			);
@@ -193,8 +190,7 @@
 		F50E9BEE19D35DE100B3E0D7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F5E7A13019FA23E5007B435C /* FacebookSDK.framework */,
-				F5E7A13119FA23E5007B435C /* FBAudienceNetwork.framework */,
+				1D3352371A11F81A00F9F998 /* FacebookSDK.framework */,
 				F5B51CB919F5B9600007B020 /* Accounts.framework */,
 				F5711DAF19F568240041CBA9 /* Social.framework */,
 				F50E9BDE19D32F8F00B3E0D7 /* Security.framework */,
@@ -576,6 +572,7 @@
 					/Users/michaelwirig/Documents/FacebookSDK/FBAudienceNetwork,
 				);
 				INFOPLIST_FILE = "Devin Supertramp/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -601,6 +598,7 @@
 					/Users/michaelwirig/Documents/FacebookSDK/FBAudienceNetwork,
 				);
 				INFOPLIST_FILE = "Devin Supertramp/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

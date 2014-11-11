@@ -1,4 +1,4 @@
-//
+
 //  VideosController.swift
 //  Devin Supertramp
 //
@@ -7,13 +7,17 @@
 //
 
 import UIKit
-
+import Social
 
 let reuseIdentifier = "VidCell"
+func exitShare() {
+    
+}
+
 
 class VideosController: UICollectionViewController, YTPlayerViewDelegate {
     
-    
+    var shareView = UIView()
     var imageUrls = [String]()
     var titles = [String]()
     var imageCache = NSMutableDictionary()
@@ -23,7 +27,8 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
     var videoObjects = [AnyObject]()
     var refresher = UIRefreshControl()
     var url = NSURL()
-    var shareView = UIView()
+    
+  
     
     
     
@@ -34,15 +39,37 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
     
     @IBAction func twitterShare(sender: AnyObject) {
         println("shared \(sharedTitle) to twitter")
+        
+        var twitterShare : SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+        
+        var sharedUrl = NSURL(string: "www.youtube.com/watch?v=" + sharedId)
+        twitterShare.setInitialText("Check out this sweet video! #teamsupertramp")
+        twitterShare.addURL(sharedUrl)
+        
+        
+        self.presentViewController(twitterShare, animated: true, completion: nil)
     }
     
     @IBAction func facebookShare(sender: AnyObject) {
         println("shared \(sharedTitle) to facebook")
         
+        
+        var fbShare : SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+        
+        var sharedUrl = NSURL(string: "www.youtube.com/watch?v=" + sharedId)
+        
+        fbShare.setInitialText("Check out this sweet video! #teamsupertramp")
+        fbShare.addURL(sharedUrl)
+        
+        
+        
+        self.presentViewController(fbShare, animated: true, completion: nil)
+        
+        
     }
     
     @IBOutlet weak var mediaPlayer: YTPlayerView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,7 +78,7 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
         self.mediaPlayer.hidden = true
         self.updateView()
         
-
+        
         //pull to refresh initialized
         refresher = UIRefreshControl()
         refresher.attributedTitle = NSAttributedString(string: "Pull to Refresh")
@@ -72,7 +99,7 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
                 // The find succeeded.
                 NSLog("Successfully retrieved \(objects.count) videos.")
                 self.videoObjects = objects
-//                 Do something with the found objects
+                //                 Do something with the found objects
                 for object in objects {
                     var title = object["title"] as String
                     var dur = object["duration"] as String
@@ -97,7 +124,7 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
             
             self.refresher.endRefreshing()
         }//end query
-
+        
     }
     
     
@@ -109,7 +136,7 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
         
     }
     
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -118,21 +145,21 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
     
     
     // MARK: UICollectionViewDataSource
-
+    
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         //#warning Incomplete method implementation -- Return the number of sections
         return 1
     }
-
-
+    
+    
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //#warning Incomplete method implementation -- Return the number of items in the section
         return self.titles.count
     }
-
+    
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> VidCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as VidCell
-    
+        
         // Configure the cell
         
         cell.shareView.hidden = true
@@ -140,8 +167,9 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
         cell.titleLabel.text = self.titles[indexPath.row]
         cell.durationLabel.text = self.durs[indexPath.row]
         cell.releaseDateLabel.text = self.dates[indexPath.row]
-       
+        
         self.url = NSURL(string: self.imageUrls[indexPath.row])!
+        cell.cellVideoId = self.youtubeIds[indexPath.row]
         cell.thumbnailImageView.sd_setImageWithURL(url)
         
         cell.backgroundColor = UIColor.blackColor()
@@ -149,26 +177,54 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
         return cell
     }
     
- 
+    
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
         if sharing == false {
-        
-        self.mediaPlayer.hidden = false
-        self.mediaPlayer.loadWithVideoId(self.youtubeIds[indexPath.row])
-        println("cell \(indexPath.row)")
-        println(self.youtubeIds[indexPath.row])
-    
+            
+            
+            self.mediaPlayer.hidden = false
+            self.mediaPlayer.loadWithVideoId(self.youtubeIds[indexPath.row])
+            println("cell \(indexPath.row)")
+            println(self.youtubeIds[indexPath.row])
+            
         } else {
+            
+           
             println("cancel sharing before viewing video")
+            
+            sharing = false
+            
+            println(sharing)
+            
         }
     }
     
     func playerView(playerView: YTPlayerView!, didChangeToState state: YTPlayerState) {
         println("Changed State")
         
-       //use a switch here to do blocks of code for each player state
+        switch state.value {
+        case kYTPlayerStatePaused.value:
+            println("playerView is paused/done was pressed")
             
+        case kYTPlayerStatePlaying.value:
+            println("playerView is playing")
+
+        case kYTPlayerStateEnded.value:
+            println("playerView ended")
+            
+        case kYTPlayerStateBuffering.value:
+            println("playerView is buffering")
+
+        case kYTPlayerStateUnstarted.value:
+            println("playerView is unstarted")
+        
+        default:
+            println("playerView State changed")
+
+        }
+        //use a switch here to do blocks of code for each player state
+        
     }
     
     func playerViewDidBecomeReady(playerView: YTPlayerView!) {
@@ -179,34 +235,35 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
     
     
     // MARK: UICollectionViewDelegate
-
+    
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
     func collectionView(collectionView: UICollectionView!, shouldHighlightItemAtIndexPath indexPath: NSIndexPath!) -> Bool {
-        return true
+    return true
     }
     */
-
+    
     /*
     // Uncomment this method to specify if the specified item should be selected
     func collectionView(collectionView: UICollectionView!, shouldSelectItemAtIndexPath indexPath: NSIndexPath!) -> Bool {
-        return true
+    return true
     }
     */
-
+    
     /*
     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
     func collectionView(collectionView: UICollectionView!, shouldShowMenuForItemAtIndexPath indexPath: NSIndexPath!) -> Bool {
-        return false
+    return false
     }
-
+    
     func collectionView(collectionView: UICollectionView!, canPerformAction action: String!, forItemAtIndexPath indexPath: NSIndexPath!, withSender sender: AnyObject!) -> Bool {
-        return false
+    return false
     }
-
+    
     func collectionView(collectionView: UICollectionView!, performAction action: String!, forItemAtIndexPath indexPath: NSIndexPath!, withSender sender: AnyObject!) {
     
     }
     */
-
+    
 }
+
