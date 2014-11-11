@@ -11,7 +11,8 @@ import UIKit
 
 let reuseIdentifier = "VidCell"
 
-class VideosController: UICollectionViewController, YTPlayerViewDelegate, UIPageViewControllerDelegate {
+class VideosController: UICollectionViewController, YTPlayerViewDelegate {
+    
     
     var imageUrls = [String]()
     var titles = [String]()
@@ -22,15 +23,34 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate, UIPage
     var videoObjects = [AnyObject]()
     var refresher = UIRefreshControl()
     var url = NSURL()
+    var shareView = UIView()
+    
+    
+    
+    @IBAction func shareVideo(sender: AnyObject) {
+        println("yay? shared \(sharedTitle) which was released \(sharedDate)")
+        
+    }
+    
+    @IBAction func twitterShare(sender: AnyObject) {
+        println("shared \(sharedTitle) to twitter")
+    }
+    
+    @IBAction func facebookShare(sender: AnyObject) {
+        println("shared \(sharedTitle) to facebook")
+        
+    }
     
     @IBOutlet weak var mediaPlayer: YTPlayerView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        sharing = false
         self.mediaPlayer.delegate = self
         self.mediaPlayer.hidden = true
         self.updateView()
+        
 
         //pull to refresh initialized
         refresher = UIRefreshControl()
@@ -80,6 +100,8 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate, UIPage
 
     }
     
+    
+    
     func refresh() {
         
         self.updateView()
@@ -92,17 +114,9 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate, UIPage
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+    
+    
     // MARK: UICollectionViewDataSource
 
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -121,6 +135,8 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate, UIPage
     
         // Configure the cell
         
+        cell.shareView.hidden = true
+        
         cell.titleLabel.text = self.titles[indexPath.row]
         cell.durationLabel.text = self.durs[indexPath.row]
         cell.releaseDateLabel.text = self.dates[indexPath.row]
@@ -129,28 +145,38 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate, UIPage
         cell.thumbnailImageView.sd_setImageWithURL(url)
         
         cell.backgroundColor = UIColor.blackColor()
+        
         return cell
-    
-
     }
     
+ 
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        if sharing == false {
         
         self.mediaPlayer.hidden = false
         self.mediaPlayer.loadWithVideoId(self.youtubeIds[indexPath.row])
         println("cell \(indexPath.row)")
         println(self.youtubeIds[indexPath.row])
     
+        } else {
+            println("cancel sharing before viewing video")
+        }
     }
     
     func playerView(playerView: YTPlayerView!, didChangeToState state: YTPlayerState) {
         println("Changed State")
         
+       //use a switch here to do blocks of code for each player state
+            
     }
     
     func playerViewDidBecomeReady(playerView: YTPlayerView!) {
         self.mediaPlayer.playVideo()
     }
+    
+    
+    
     
     // MARK: UICollectionViewDelegate
 

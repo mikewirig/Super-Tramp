@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sZr-zt-sFG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Z1V-uC-7U4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
@@ -8,7 +8,7 @@
         <scene sceneID="CkO-K0-X3l">
             <objects>
                 <collectionViewController storyboardIdentifier="VideosController" title="Videos" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sZr-zt-sFG" customClass="VideosController" customModule="Devin_Supertramp" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" dataMode="prototypes" id="fG5-na-Q9d">
+                    <collectionView key="view" clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" id="fG5-na-Q9d">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -23,6 +23,7 @@
                             <rect key="frame" x="0.0" y="-195" width="320" height="568"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <gestureRecognizers/>
                         </view>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VidCell" id="2EE-R2-i6x" customClass="VidCell" customModule="Devin_Supertramp" customModuleProvider="target">
@@ -32,11 +33,11 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="178"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s4t-E7-8Kc">
-                                            <rect key="frame" x="0.0" y="-31" width="320" height="240"/>
+                                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s4t-E7-8Kc">
+                                            <rect key="frame" x="0.0" y="-30" width="320" height="240"/>
                                         </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blur@0.5x.png" translatesAutoresizingMaskIntoConstraints="NO" id="uwJ-s2-Bly">
-                                            <rect key="frame" x="0.0" y="136" width="320" height="34"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blur@0.5x" translatesAutoresizingMaskIntoConstraints="NO" id="uwJ-s2-Bly">
+                                            <rect key="frame" x="0.0" y="136" width="320" height="44"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdU-40-4xu">
                                             <rect key="frame" x="8" y="136" width="274" height="21"/>
@@ -71,9 +72,56 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
-                                                <action selector="share:" destination="2EE-R2-i6x" eventType="touchUpInside" id="5Pe-M0-dO5"/>
+                                                <action selector="share:" destination="2EE-R2-i6x" eventType="touchUpInside" id="pNX-TB-bsA"/>
+                                                <action selector="shareVideo:" destination="sZr-zt-sFG" eventType="touchUpInside" id="k0e-lO-oK8"/>
                                             </connections>
                                         </button>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dMR-eW-dJb">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="178"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Stw-Rz-7sO">
+                                                    <rect key="frame" x="236" y="100" width="61" height="60"/>
+                                                    <state key="normal" image="Facebook.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="facebookPressed:" destination="2EE-R2-i6x" eventType="touchUpInside" id="BtJ-rL-kW6"/>
+                                                        <action selector="facebookShare:" destination="sZr-zt-sFG" eventType="touchUpInside" id="ahU-Sg-ihM"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MG0-4b-pAM">
+                                                    <rect key="frame" x="152" y="100" width="61" height="60"/>
+                                                    <state key="normal" image="Twitter.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="twitterPressed:" destination="2EE-R2-i6x" eventType="touchUpInside" id="6WL-DI-87V"/>
+                                                        <action selector="twitterShare:" destination="sZr-zt-sFG" eventType="touchUpInside" id="Hy9-mQ-Vnd"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7c-XL-gG1">
+                                                    <rect key="frame" x="8" y="2" width="267" height="60"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYr-V4-wxZ">
+                                                    <rect key="frame" x="263" y="10" width="57" height="43"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                                    <state key="normal" title="X">
+                                                        <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="cancelShare:" destination="2EE-R2-i6x" eventType="touchUpInside" id="uwI-Be-QLA"/>
+                                                    </connections>
+                                                </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="slV-Af-K1w">
+                                                    <rect key="frame" x="8" y="80" width="120" height="90"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                        </view>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
@@ -82,6 +130,9 @@
                                     <outlet property="durationLabel" destination="Sgj-6y-8BI" id="Ux0-Nz-YFt"/>
                                     <outlet property="favoiteImage" destination="1hW-Op-wOj" id="aj8-EG-jyI"/>
                                     <outlet property="releaseDateLabel" destination="Bfz-dy-6xu" id="QZu-WK-zAx"/>
+                                    <outlet property="shareImageView" destination="slV-Af-K1w" id="GMx-Lf-Bc7"/>
+                                    <outlet property="shareTitleLabel" destination="D7c-XL-gG1" id="ouw-Ra-hnQ"/>
+                                    <outlet property="shareView" destination="dMR-eW-dJb" id="Wrz-w1-kEA"/>
                                     <outlet property="thumbnailImageView" destination="s4t-E7-8Kc" id="xUC-Mf-x3D"/>
                                     <outlet property="titleLabel" destination="UdU-40-4xu" id="rBi-UX-6UE"/>
                                 </connections>
@@ -92,7 +143,13 @@
                             <outlet property="delegate" destination="sZr-zt-sFG" id="7Nh-5a-2r6"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Videos" id="6eq-Hm-EHw" colorLabel="IBBuiltInLabel-Blue"/>
+                    <navigationItem key="navigationItem" title="Videos" id="6eq-Hm-EHw" colorLabel="IBBuiltInLabel-Blue">
+                        <barButtonItem key="rightBarButtonItem" title="Social" id="cdM-dt-aGq">
+                            <connections>
+                                <segue destination="U7L-eh-NX3" kind="show" id="49m-8H-agF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <keyCommands/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
@@ -103,7 +160,126 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbP-FV-I0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1090" y="120"/>
+            <point key="canvasLocation" x="1895" y="140"/>
+        </scene>
+        <!--Social-->
+        <scene sceneID="tfT-uj-rvo">
+            <objects>
+                <viewController id="U7L-eh-NX3" customClass="SocailViewController" customModule="Devin_Supertramp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vss-pK-CZS"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Uu-j0-3tA"/>
+                    </layoutGuides>
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="f9B-IK-cw4">
+                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="socialBack@0.5x.png" translatesAutoresizingMaskIntoConstraints="NO" id="Pkd-z3-Z5P">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIH-zM-FUY">
+                                <rect key="frame" x="210" y="344" width="61" height="60"/>
+                                <state key="normal" image="Instagram.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="intsagramFollow:" destination="U7L-eh-NX3" eventType="touchUpInside" id="vrC-dJ-2AW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GG0-VX-sjc">
+                                <rect key="frame" x="15" y="419" width="61" height="60"/>
+                                <state key="normal" image="Facebook.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="facebookFollow:" destination="U7L-eh-NX3" eventType="touchUpInside" id="Ekc-Zf-npJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rt0-QY-eZ1">
+                                <rect key="frame" x="92" y="419" width="61" height="60"/>
+                                <state key="normal" image="Google +.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="googleFollow:" destination="U7L-eh-NX3" eventType="touchUpInside" id="jnj-kB-YiS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXm-cr-8dH">
+                                <rect key="frame" x="168" y="419" width="61" height="60"/>
+                                <state key="normal" image="Blogger.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="blogFollow:" destination="U7L-eh-NX3" eventType="touchUpInside" id="mTV-WY-NVW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mD-5Y-PZb">
+                                <rect key="frame" x="49" y="344" width="61" height="60"/>
+                                <state key="normal" image="Youtube.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="youTubeSubscribe:" destination="U7L-eh-NX3" eventType="touchUpInside" id="6Uc-JC-hKO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y15-TJ-LwZ">
+                                <rect key="frame" x="130" y="344" width="61" height="60"/>
+                                <state key="normal" image="Twitter.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="twitterFollow:" destination="U7L-eh-NX3" eventType="touchUpInside" id="Yzy-s0-zPU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stay up to date with all our" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSt-We-6r2">
+                                <rect key="frame" x="63" y="264" width="194" height="21"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="latest projects" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S98-1R-uyf">
+                                <rect key="frame" x="107" y="283" width="102" height="21"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Follow us on Social Media" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0U-gB-onM">
+                                <rect key="frame" x="68" y="301" width="184" height="21"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsP-yh-Yu4">
+                                <rect key="frame" x="243" y="419" width="61" height="60"/>
+                                <state key="normal" image="Mail.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendEmail:" destination="U7L-eh-NX3" eventType="touchUpInside" id="mlX-hW-aai"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Devin.png" translatesAutoresizingMaskIntoConstraints="NO" id="c8I-z8-BE4">
+                                <rect key="frame" x="82" y="93" width="153" height="153"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ8-xD-QYW">
+                                <rect key="frame" x="2" y="513" width="311" height="37"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <state key="normal" title="Meet the Rest of Team SuperTramp">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Social" id="KGK-4P-9Ih"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3qn-hF-q0Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2358" y="113"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="wPS-FA-EtX">
@@ -137,24 +313,46 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ko7-MN-sjT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="739" y="-658"/>
+            <point key="canvasLocation" x="1056" y="113"/>
         </scene>
-        <!--Page View Controller-->
-        <scene sceneID="gWj-TB-38U">
+        <!--Navigation Controller-->
+        <scene sceneID="LFe-eu-FRt">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="3zw-CS-8Qo" customClass="pageViewController" customModule="Devin_Supertramp" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Z1V-uC-7U4" sceneMemberID="viewController">
+                    <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </pageViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TJS-py-ZSh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="afv-Gz-NUg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sZr-zt-sFG" kind="relationship" relationship="rootViewController" id="Pqr-gP-fuF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fvh-hb-p3C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="597" y="120"/>
+            <point key="canvasLocation" x="1502" y="113"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Blogger.png" width="121" height="120"/>
+        <image name="Devin.png" width="306" height="306"/>
+        <image name="Facebook.png" width="121" height="120"/>
         <image name="Favorite@0.5x" width="49" height="48"/>
+        <image name="Google +.png" width="121" height="119"/>
+        <image name="Instagram.png" width="121" height="120"/>
+        <image name="Mail.png" width="121" height="120"/>
         <image name="Share@0.5x" width="44" height="52"/>
-        <image name="blur@0.5x.png" width="1" height="1"/>
+        <image name="Twitter.png" width="123" height="120"/>
+        <image name="Youtube.png" width="122" height="120"/>
+        <image name="blur@0.5x" width="320" height="97"/>
         <image name="facebooklogin" width="202" height="46"/>
         <image name="logo-14" width="477" height="253"/>
+        <image name="socialBack@0.5x.png" width="320" height="568"/>
     </resources>
 </document>
