@@ -33,12 +33,24 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
     
     @IBOutlet weak var mediaPlayer: YTPlayerView!
            
+    override func shouldAutorotate() -> Bool {
+        
+        return true
+    }
     
+    override func supportedInterfaceOrientations() -> Int {
+        println("second supported")
+        return Int(UIInterfaceOrientationMask.Landscape.rawValue)
+    }
    
     
     override func viewDidLoad() {
+        
+        
+        
         super.viewDidLoad()
-                
+       
+      
         let screenSize: CGRect = UIScreen.mainScreen().bounds
         let screenWidth = screenSize.width;
         let screenHeight = screenSize.height;
@@ -51,13 +63,24 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
         self.mediaPlayer.hidden = true
         self.updateView()
         
+        shouldAutorotate()
         
+<<<<<<< HEAD
         
 //        //pull to refresh initialized
 //        refresher = UIRefreshControl()
 //        refresher.attributedTitle = NSAttributedString(string: "Pull to Refresh")
 //        refresher.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
 //        self.collectionView.addSubview(refresher)
+=======
+        //pull to refresh initialized
+        refresher = UIRefreshControl()
+        refresher.attributedTitle = NSAttributedString(string: "Pull to Refresh")
+        refresher.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
+        self.collectionView.addSubview(refresher)
+        
+
+>>>>>>> FETCH_HEAD
     }
     
     
@@ -200,7 +223,10 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
             UIApplication.sharedApplication().endIgnoringInteractionEvents()
             }
             self.mediaPlayer.hidden = false
+<<<<<<< HEAD
             
+=======
+>>>>>>> FETCH_HEAD
             self.bufferView.hidden = true
         case kYTPlayerStateEnded.value:
             println("playerView ended")
