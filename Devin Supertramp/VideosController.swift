@@ -21,7 +21,7 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
     var dates = [String]()
     var youtubeIds = [String]()
     var videoObjects = [AnyObject]()
-    var refresher = UIRefreshControl()
+//    var refresher = UIRefreshControl()
     var url = NSURL()
     var activityIndicator = UIActivityIndicatorView()
     var bufferView = UIView()
@@ -52,12 +52,14 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
         self.updateView()
         
         
-        //pull to refresh initialized
-        refresher = UIRefreshControl()
-        refresher.attributedTitle = NSAttributedString(string: "Pull to Refresh")
-        refresher.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
-        self.collectionView.addSubview(refresher)
+        
+//        //pull to refresh initialized
+//        refresher = UIRefreshControl()
+//        refresher.attributedTitle = NSAttributedString(string: "Pull to Refresh")
+//        refresher.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
+//        self.collectionView.addSubview(refresher)
     }
+    
     
     func updateView() {
         
@@ -95,20 +97,20 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
                 NSLog("Error: %@ %@", error, error.userInfo!)
             }
             
-            self.refresher.endRefreshing()
+//            self.refresher.endRefreshing()
         }//end query
         
     }
     
     
     
-    func refresh() {
-        
-        self.updateView()
-        println("refreshed")
-        
-    }
-    
+//    func refresh() {
+//        
+//        self.updateView()
+//        println("refreshed")
+//        
+//    }
+//    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -197,6 +199,7 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
             if UIApplication.sharedApplication().isIgnoringInteractionEvents() {
             UIApplication.sharedApplication().endIgnoringInteractionEvents()
             }
+            self.mediaPlayer.hidden = false
             
             self.bufferView.hidden = true
         case kYTPlayerStateEnded.value:
@@ -268,6 +271,19 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
         
     }
 
+    @IBAction func emailShare(sender: AnyObject) {
+        println("shared to email")
+        
+        var address = " "
+        var subject = "Check out this Awesome Video!"
+        var body =  "www.youtube.com/watch?v=" + sharedId
+        var path = "mailto:\(address)?&subject=\(subject)&body=\(body)"
+        println(path)
+        var url = NSURL(string: path.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)
+        
+        UIApplication.sharedApplication().openURL(url!)
+        
+    }
     
     // MARK: UICollectionViewDelegate
     

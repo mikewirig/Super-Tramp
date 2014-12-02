@@ -41,6 +41,8 @@
 		F53A051B1A1E7AF800D7E755 /* Rectangle 16.png in Resources */ = {isa = PBXBuildFile; fileRef = F53A05191A1E7AF800D7E755 /* Rectangle 16.png */; };
 		F5711DB019F568240041CBA9 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5711DAF19F568240041CBA9 /* Social.framework */; };
 		F59A69C91A094F8E00505817 /* SocailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59A69C81A094F8E00505817 /* SocailViewController.swift */; };
+		F5B44C451A2E63AA00BCBF89 /* ChronoIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F5B44C431A2E63AA00BCBF89 /* ChronoIcon.png */; };
+		F5B44C461A2E63AA00BCBF89 /* ChronoIcon@0.5x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5B44C441A2E63AA00BCBF89 /* ChronoIcon@0.5x.png */; };
 		F5B51CBA19F5B9600007B020 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B51CB919F5B9600007B020 /* Accounts.framework */; };
 		F5D8C9B71A11C9A9004FDA7E /* Youtube@0.5x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D8C9B31A11C9A9004FDA7E /* Youtube@0.5x.png */; };
 		F5D8C9B81A11C9A9004FDA7E /* Youtube.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D8C9B41A11C9A9004FDA7E /* Youtube.png */; };
@@ -114,6 +116,8 @@
 		F53A05191A1E7AF800D7E755 /* Rectangle 16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rectangle 16.png"; sourceTree = "<group>"; };
 		F5711DAF19F568240041CBA9 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		F59A69C81A094F8E00505817 /* SocailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocailViewController.swift; sourceTree = "<group>"; };
+		F5B44C431A2E63AA00BCBF89 /* ChronoIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChronoIcon.png; sourceTree = "<group>"; };
+		F5B44C441A2E63AA00BCBF89 /* ChronoIcon@0.5x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ChronoIcon@0.5x.png"; sourceTree = "<group>"; };
 		F5B51CB919F5B9600007B020 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		F5D8C9B31A11C9A9004FDA7E /* Youtube@0.5x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Youtube@0.5x.png"; sourceTree = "<group>"; };
 		F5D8C9B41A11C9A9004FDA7E /* Youtube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Youtube.png; sourceTree = "<group>"; };
@@ -198,6 +202,8 @@
 				F5D8C9B51A11C9A9004FDA7E /* Twitter@0.5x.png */,
 				F5D8C9BB1A11C9D6004FDA7E /* Mail@0.5x.png */,
 				F5D8C9BC1A11C9D6004FDA7E /* Mail.png */,
+				F5B44C431A2E63AA00BCBF89 /* ChronoIcon.png */,
+				F5B44C441A2E63AA00BCBF89 /* ChronoIcon@0.5x.png */,
 				F5D8C9BD1A11C9D6004FDA7E /* Instagram@0.5x.png */,
 				F5D8C9BE1A11C9D6004FDA7E /* Instagram.png */,
 				F5D8C9BF1A11C9D6004FDA7E /* Google +@0.5x.png */,
@@ -402,12 +408,14 @@
 				F5D8C9BA1A11C9A9004FDA7E /* Twitter.png in Resources */,
 				F53A051B1A1E7AF800D7E755 /* Rectangle 16.png in Resources */,
 				F5D8C9D51A11CA2F004FDA7E /* socialBack.png in Resources */,
+				F5B44C451A2E63AA00BCBF89 /* ChronoIcon.png in Resources */,
 				F5D8C9CB1A11C9D6004FDA7E /* Google +@0.5x.png in Resources */,
 				F5D8C9CC1A11C9D6004FDA7E /* Google +.png in Resources */,
 				F50FC1BA1A24164F0002CA76 /* TwitterBottomIcon.png in Resources */,
 				F5D8C9B71A11C9A9004FDA7E /* Youtube@0.5x.png in Resources */,
 				F50FC1C01A24164F0002CA76 /* EmailBottomIcon.png in Resources */,
 				F50FC1BE1A24164F0002CA76 /* FBbottomIcon.png in Resources */,
+				F5B44C461A2E63AA00BCBF89 /* ChronoIcon@0.5x.png in Resources */,
 				F5D8C9C71A11C9D6004FDA7E /* Mail@0.5x.png in Resources */,
 				F53A051A1A1E7AF800D7E755 /* Rectangle 16@0.5x.png in Resources */,
 				F5D8C9B81A11C9A9004FDA7E /* Youtube.png in Resources */,
