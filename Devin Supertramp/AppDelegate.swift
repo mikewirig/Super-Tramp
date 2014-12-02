@@ -21,8 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         PFFacebookUtils.initializeFacebook()
         
-        //set up View Controllers/layout
-        
         return true
     }
 

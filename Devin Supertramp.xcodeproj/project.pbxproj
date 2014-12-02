@@ -22,6 +22,14 @@
 		F50E9BE319D32F8F00B3E0D7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F50E9BE019D32F8F00B3E0D7 /* SystemConfiguration.framework */; };
 		F50E9BE819D32FBC00B3E0D7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F50E9BE519D32FBB00B3E0D7 /* Parse.framework */; };
 		F50E9BE919D32FBC00B3E0D7 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F50E9BE619D32FBB00B3E0D7 /* ParseFacebookUtils.framework */; };
+		F50FC1B91A24164F0002CA76 /* TwitterBottomIcon@0.5x.png in Resources */ = {isa = PBXBuildFile; fileRef = F50FC1B11A24164F0002CA76 /* TwitterBottomIcon@0.5x.png */; };
+		F50FC1BA1A24164F0002CA76 /* TwitterBottomIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F50FC1B21A24164F0002CA76 /* TwitterBottomIcon.png */; };
+		F50FC1BD1A24164F0002CA76 /* FBbottomIcon@0.5x.png in Resources */ = {isa = PBXBuildFile; fileRef = F50FC1B51A24164F0002CA76 /* FBbottomIcon@0.5x.png */; };
+		F50FC1BE1A24164F0002CA76 /* FBbottomIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F50FC1B61A24164F0002CA76 /* FBbottomIcon.png */; };
+		F50FC1BF1A24164F0002CA76 /* EmailBottomIcon@0.5x.png in Resources */ = {isa = PBXBuildFile; fileRef = F50FC1B71A24164F0002CA76 /* EmailBottomIcon@0.5x.png */; };
+		F50FC1C01A24164F0002CA76 /* EmailBottomIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F50FC1B81A24164F0002CA76 /* EmailBottomIcon.png */; };
+		F50FC1C71A2416F40002CA76 /* bottomBlur@0.5x.png in Resources */ = {isa = PBXBuildFile; fileRef = F50FC1C51A2416F40002CA76 /* bottomBlur@0.5x.png */; };
+		F50FC1C81A2416F40002CA76 /* bottomBlur.png in Resources */ = {isa = PBXBuildFile; fileRef = F50FC1C61A2416F40002CA76 /* bottomBlur.png */; };
 		F510EA9619CB6A3600C946B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F510EA9519CB6A3600C946B9 /* AppDelegate.swift */; };
 		F510EA9919CB6A3600C946B9 /* Devin_Supertramp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F510EA9719CB6A3600C946B9 /* Devin_Supertramp.xcdatamodeld */; };
 		F510EA9E19CB6A3600C946B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F510EA9C19CB6A3600C946B9 /* Main.storyboard */; };
@@ -29,11 +37,11 @@
 		F510EAA319CB6A3600C946B9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F510EAA119CB6A3600C946B9 /* LaunchScreen.xib */; };
 		F510EAAF19CB6A3600C946B9 /* Devin_SupertrampTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F510EAAE19CB6A3600C946B9 /* Devin_SupertrampTests.swift */; };
 		F510EABF19CB721600C946B9 /* VideosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F510EABE19CB721600C946B9 /* VideosController.swift */; };
+		F53A051A1A1E7AF800D7E755 /* Rectangle 16@0.5x.png in Resources */ = {isa = PBXBuildFile; fileRef = F53A05181A1E7AF800D7E755 /* Rectangle 16@0.5x.png */; };
+		F53A051B1A1E7AF800D7E755 /* Rectangle 16.png in Resources */ = {isa = PBXBuildFile; fileRef = F53A05191A1E7AF800D7E755 /* Rectangle 16.png */; };
 		F5711DB019F568240041CBA9 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5711DAF19F568240041CBA9 /* Social.framework */; };
-		F57C64A21A0438D5006F3A68 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57C64A11A0438D5006F3A68 /* LoginViewController.swift */; };
 		F59A69C91A094F8E00505817 /* SocailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59A69C81A094F8E00505817 /* SocailViewController.swift */; };
 		F5B51CBA19F5B9600007B020 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B51CB919F5B9600007B020 /* Accounts.framework */; };
-		F5D2A9941A0012C600AE813E /* FavoritesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D2A9931A0012C600AE813E /* FavoritesController.swift */; };
 		F5D8C9B71A11C9A9004FDA7E /* Youtube@0.5x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D8C9B31A11C9A9004FDA7E /* Youtube@0.5x.png */; };
 		F5D8C9B81A11C9A9004FDA7E /* Youtube.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D8C9B41A11C9A9004FDA7E /* Youtube.png */; };
 		F5D8C9B91A11C9A9004FDA7E /* Twitter@0.5x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D8C9B51A11C9A9004FDA7E /* Twitter@0.5x.png */; };
@@ -83,6 +91,14 @@
 		F50E9BE519D32FBB00B3E0D7 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		F50E9BE619D32FBB00B3E0D7 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		F50E9BEA19D3303300B3E0D7 /* Devin Supertramp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Devin Supertramp-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		F50FC1B11A24164F0002CA76 /* TwitterBottomIcon@0.5x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TwitterBottomIcon@0.5x.png"; sourceTree = "<group>"; };
+		F50FC1B21A24164F0002CA76 /* TwitterBottomIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwitterBottomIcon.png; sourceTree = "<group>"; };
+		F50FC1B51A24164F0002CA76 /* FBbottomIcon@0.5x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FBbottomIcon@0.5x.png"; sourceTree = "<group>"; };
+		F50FC1B61A24164F0002CA76 /* FBbottomIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FBbottomIcon.png; sourceTree = "<group>"; };
+		F50FC1B71A24164F0002CA76 /* EmailBottomIcon@0.5x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EmailBottomIcon@0.5x.png"; sourceTree = "<group>"; };
+		F50FC1B81A24164F0002CA76 /* EmailBottomIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EmailBottomIcon.png; sourceTree = "<group>"; };
+		F50FC1C51A2416F40002CA76 /* bottomBlur@0.5x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottomBlur@0.5x.png"; sourceTree = "<group>"; };
+		F50FC1C61A2416F40002CA76 /* bottomBlur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottomBlur.png; sourceTree = "<group>"; };
 		F510EA9019CB6A3600C946B9 /* Devin Supertramp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Devin Supertramp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F510EA9419CB6A3600C946B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F510EA9519CB6A3600C946B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,11 +110,11 @@
 		F510EAAD19CB6A3600C946B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F510EAAE19CB6A3600C946B9 /* Devin_SupertrampTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Devin_SupertrampTests.swift; sourceTree = "<group>"; };
 		F510EABE19CB721600C946B9 /* VideosController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideosController.swift; sourceTree = "<group>"; };
+		F53A05181A1E7AF800D7E755 /* Rectangle 16@0.5x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rectangle 16@0.5x.png"; sourceTree = "<group>"; };
+		F53A05191A1E7AF800D7E755 /* Rectangle 16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rectangle 16.png"; sourceTree = "<group>"; };
 		F5711DAF19F568240041CBA9 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		F57C64A11A0438D5006F3A68 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F59A69C81A094F8E00505817 /* SocailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocailViewController.swift; sourceTree = "<group>"; };
 		F5B51CB919F5B9600007B020 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
-		F5D2A9931A0012C600AE813E /* FavoritesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesController.swift; sourceTree = "<group>"; };
 		F5D8C9B31A11C9A9004FDA7E /* Youtube@0.5x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Youtube@0.5x.png"; sourceTree = "<group>"; };
 		F5D8C9B41A11C9A9004FDA7E /* Youtube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Youtube.png; sourceTree = "<group>"; };
 		F5D8C9B51A11C9A9004FDA7E /* Twitter@0.5x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Twitter@0.5x.png"; sourceTree = "<group>"; };
@@ -165,9 +181,19 @@
 		F50E9BED19D35DC700B3E0D7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F53A05181A1E7AF800D7E755 /* Rectangle 16@0.5x.png */,
+				F53A05191A1E7AF800D7E755 /* Rectangle 16.png */,
 				F5D8C9D31A11CA2F004FDA7E /* socialBack.png */,
 				F5D8C9D41A11CA2F004FDA7E /* socialBack@0.5x.png */,
+				F50FC1B11A24164F0002CA76 /* TwitterBottomIcon@0.5x.png */,
+				F50FC1B21A24164F0002CA76 /* TwitterBottomIcon.png */,
+				F50FC1B51A24164F0002CA76 /* FBbottomIcon@0.5x.png */,
+				F50FC1B61A24164F0002CA76 /* FBbottomIcon.png */,
+				F50FC1B71A24164F0002CA76 /* EmailBottomIcon@0.5x.png */,
+				F50FC1B81A24164F0002CA76 /* EmailBottomIcon.png */,
 				F5D8C9B31A11C9A9004FDA7E /* Youtube@0.5x.png */,
+				F50FC1C51A2416F40002CA76 /* bottomBlur@0.5x.png */,
+				F50FC1C61A2416F40002CA76 /* bottomBlur.png */,
 				F5D8C9B41A11C9A9004FDA7E /* Youtube.png */,
 				F5D8C9B51A11C9A9004FDA7E /* Twitter@0.5x.png */,
 				F5D8C9BB1A11C9D6004FDA7E /* Mail@0.5x.png */,
@@ -235,9 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				F510EA9519CB6A3600C946B9 /* AppDelegate.swift */,
-				F57C64A11A0438D5006F3A68 /* LoginViewController.swift */,
 				F510EABE19CB721600C946B9 /* VideosController.swift */,
-				F5D2A9931A0012C600AE813E /* FavoritesController.swift */,
 				F59A69C81A094F8E00505817 /* SocailViewController.swift */,
 				F50E9BB219D2167800B3E0D7 /* VidCell.swift */,
 				F510EA9C19CB6A3600C946B9 /* Main.storyboard */,
@@ -360,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5D8C9D11A11C9D6004FDA7E /* Blogger@0.5x.png in Resources */,
+				F50FC1C71A2416F40002CA76 /* bottomBlur@0.5x.png in Resources */,
 				F5D8C9C81A11C9D6004FDA7E /* Mail.png in Resources */,
 				F510EA9E19CB6A3600C946B9 /* Main.storyboard in Resources */,
 				F5D8C9D61A11CA2F004FDA7E /* socialBack@0.5x.png in Resources */,
@@ -368,17 +393,26 @@
 				F5D8C9D21A11C9D6004FDA7E /* Blogger.png in Resources */,
 				F5D8C9D01A11C9D6004FDA7E /* Devin.png in Resources */,
 				F5D8C9CD1A11C9D6004FDA7E /* Facebook@0.5x.png in Resources */,
+				F50FC1BD1A24164F0002CA76 /* FBbottomIcon@0.5x.png in Resources */,
+				F50FC1B91A24164F0002CA76 /* TwitterBottomIcon@0.5x.png in Resources */,
 				F510EAA319CB6A3600C946B9 /* LaunchScreen.xib in Resources */,
 				F5D8C9C91A11C9D6004FDA7E /* Instagram@0.5x.png in Resources */,
 				F5D8C9CE1A11C9D6004FDA7E /* Facebook.png in Resources */,
 				F510EAA019CB6A3600C946B9 /* Images.xcassets in Resources */,
 				F5D8C9BA1A11C9A9004FDA7E /* Twitter.png in Resources */,
+				F53A051B1A1E7AF800D7E755 /* Rectangle 16.png in Resources */,
 				F5D8C9D51A11CA2F004FDA7E /* socialBack.png in Resources */,
 				F5D8C9CB1A11C9D6004FDA7E /* Google +@0.5x.png in Resources */,
 				F5D8C9CC1A11C9D6004FDA7E /* Google +.png in Resources */,
+				F50FC1BA1A24164F0002CA76 /* TwitterBottomIcon.png in Resources */,
 				F5D8C9B71A11C9A9004FDA7E /* Youtube@0.5x.png in Resources */,
+				F50FC1C01A24164F0002CA76 /* EmailBottomIcon.png in Resources */,
+				F50FC1BE1A24164F0002CA76 /* FBbottomIcon.png in Resources */,
 				F5D8C9C71A11C9D6004FDA7E /* Mail@0.5x.png in Resources */,
+				F53A051A1A1E7AF800D7E755 /* Rectangle 16@0.5x.png in Resources */,
 				F5D8C9B81A11C9A9004FDA7E /* Youtube.png in Resources */,
+				F50FC1BF1A24164F0002CA76 /* EmailBottomIcon@0.5x.png in Resources */,
+				F50FC1C81A2416F40002CA76 /* bottomBlur.png in Resources */,
 				F5D8C9CA1A11C9D6004FDA7E /* Instagram.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,10 +464,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F57C64A21A0438D5006F3A68 /* LoginViewController.swift in Sources */,
 				F50E9BB319D2167800B3E0D7 /* VidCell.swift in Sources */,
 				F510EA9619CB6A3600C946B9 /* AppDelegate.swift in Sources */,
-				F5D2A9941A0012C600AE813E /* FavoritesController.swift in Sources */,
 				F510EABF19CB721600C946B9 /* VideosController.swift in Sources */,
 				F510EA9919CB6A3600C946B9 /* Devin_Supertramp.xcdatamodeld in Sources */,
 				F59A69C91A094F8E00505817 /* SocailViewController.swift in Sources */,

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xON-8g-DaR">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Videos-->
@@ -9,19 +10,25 @@
             <objects>
                 <collectionViewController storyboardIdentifier="VideosController" title="Videos" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sZr-zt-sFG" customClass="VideosController" customModule="Devin_Supertramp" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" id="fG5-na-Q9d">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="BdU-o3-Nxk">
-                            <size key="itemSize" width="320" height="178"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="BdU-o3-Nxk">
+                            <size key="itemSize" width="414" height="275"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
-                        <view key="backgroundView" contentMode="scaleToFill" fixedFrame="YES" id="Ak5-69-HEL" customClass="YTPlayerView">
-                            <rect key="frame" x="0.0" y="-195" width="320" height="568"/>
+                        <view key="backgroundView" contentMode="scaleToFill" fixedFrame="YES" id="Ak5-69-HEL">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tto-Ro-jL7" customClass="YTPlayerView">
+                                    <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                            </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <gestureRecognizers/>
                         </view>
@@ -30,107 +37,95 @@
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="178"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="275"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s4t-E7-8Kc">
-                                            <rect key="frame" x="0.0" y="-30" width="320" height="240"/>
+                                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s4t-E7-8Kc">
+                                            <rect key="frame" x="0.0" y="4" width="414" height="313"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="414" id="4kf-eS-aPu"/>
+                                                <constraint firstAttribute="height" constant="311" id="TN0-kl-fhL"/>
+                                            </constraints>
                                         </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blur@0.5x" translatesAutoresizingMaskIntoConstraints="NO" id="uwJ-s2-Bly">
-                                            <rect key="frame" x="0.0" y="136" width="320" height="44"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Rectangle 16.png" translatesAutoresizingMaskIntoConstraints="NO" id="bI3-B2-gdW">
+                                            <rect key="frame" x="0.0" y="1" width="414" height="42"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="42" id="Oq1-PG-ViA"/>
+                                                <constraint firstAttribute="width" constant="414" id="WSl-p1-7fk"/>
+                                            </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdU-40-4xu">
-                                            <rect key="frame" x="8" y="136" width="274" height="21"/>
-                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
-                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dur" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sgj-6y-8BI">
-                                            <rect key="frame" x="279" y="136" width="40" height="21"/>
+                                            <rect key="frame" x="8" y="8" width="306" height="17"/>
                                             <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Release Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bfz-dy-6xu">
-                                            <rect key="frame" x="8" y="150" width="74" height="21"/>
+                                            <rect key="frame" x="8" y="24" width="62" height="14"/>
                                             <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="11"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hW-Op-wOj">
-                                            <rect key="frame" x="271" y="1" width="49" height="48"/>
-                                            <state key="normal" backgroundImage="Favorite@0.5x">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dur" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sgj-6y-8BI">
+                                            <rect key="frame" x="382" y="22" width="24" height="17"/>
+                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bottomBlur.png" translatesAutoresizingMaskIntoConstraints="NO" id="Mod-Vn-GAn">
+                                            <rect key="frame" x="0.0" y="233" width="414" height="42"/>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBL-9i-WzF">
+                                            <rect key="frame" x="245" y="236" width="35" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="35" id="CA7-fn-UXk"/>
+                                                <constraint firstAttribute="height" constant="35" id="H5D-aO-lAX"/>
+                                            </constraints>
+                                            <state key="normal" image="FBbottomIcon.png">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
-                                                <action selector="favorite:" destination="2EE-R2-i6x" eventType="touchUpInside" id="vJg-aw-R3h"/>
+                                                <action selector="facebookShare:" destination="sZr-zt-sFG" eventType="touchUpInside" id="CNh-Bv-eiS"/>
+                                                <action selector="sharedFB:" destination="2EE-R2-i6x" eventType="touchUpInside" id="jqL-o0-jOG"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4w-7W-dBl">
-                                            <rect key="frame" x="-1" y="-5" width="49" height="58"/>
-                                            <state key="normal" image="Share@0.5x">
+                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IA2-am-V2w">
+                                            <rect key="frame" x="296" y="236" width="35" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="35" id="Wjp-zg-caj"/>
+                                                <constraint firstAttribute="height" constant="35" id="frC-Sr-eh7"/>
+                                            </constraints>
+                                            <state key="normal" image="TwitterBottomIcon.png">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
-                                                <action selector="share:" destination="2EE-R2-i6x" eventType="touchUpInside" id="pNX-TB-bsA"/>
-                                                <action selector="shareVideo:" destination="sZr-zt-sFG" eventType="touchUpInside" id="k0e-lO-oK8"/>
+                                                <action selector="sharedTwitter:" destination="2EE-R2-i6x" eventType="touchUpInside" id="Uhr-MB-7Ea"/>
+                                                <action selector="twitterShare:" destination="sZr-zt-sFG" eventType="touchUpInside" id="nOJ-j9-rBO"/>
                                             </connections>
                                         </button>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dMR-eW-dJb">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="178"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Stw-Rz-7sO">
-                                                    <rect key="frame" x="33" y="100" width="61" height="60"/>
-                                                    <state key="normal" image="Facebook.png">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="facebookPressed:" destination="2EE-R2-i6x" eventType="touchUpInside" id="BtJ-rL-kW6"/>
-                                                        <action selector="facebookShare:" destination="sZr-zt-sFG" eventType="touchUpInside" id="ahU-Sg-ihM"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MG0-4b-pAM">
-                                                    <rect key="frame" x="130" y="100" width="61" height="60"/>
-                                                    <state key="normal" image="Twitter.png">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="twitterPressed:" destination="2EE-R2-i6x" eventType="touchUpInside" id="6WL-DI-87V"/>
-                                                        <action selector="twitterShare:" destination="sZr-zt-sFG" eventType="touchUpInside" id="Hy9-mQ-Vnd"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYr-V4-wxZ">
-                                                    <rect key="frame" x="263" y="10" width="57" height="43"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
-                                                    <state key="normal" title="X">
-                                                        <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="cancelShare:" destination="2EE-R2-i6x" eventType="touchUpInside" id="uwI-Be-QLA"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v70-Gp-hDu">
-                                                    <rect key="frame" x="225" y="100" width="61" height="60"/>
-                                                    <state key="normal" image="Mail.png">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="sendEmail:" destination="U7L-eh-NX3" eventType="touchUpInside" id="zZb-ww-4B9"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
-                                        </view>
+                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gND-e5-nd8">
+                                            <rect key="frame" x="347" y="236" width="35" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="35" id="4w3-e1-VeR"/>
+                                                <constraint firstAttribute="width" constant="35" id="mIb-xx-ZSP"/>
+                                            </constraints>
+                                            <state key="normal" image="EmailBottomIcon.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <size key="customSize" width="320" height="178"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="gND-e5-nd8" secondAttribute="trailing" constant="24" id="9jU-Va-hhV"/>
+                                    <constraint firstItem="IA2-am-V2w" firstAttribute="leading" secondItem="GBL-9i-WzF" secondAttribute="trailing" constant="16" id="KUf-ye-mir"/>
+                                    <constraint firstItem="gND-e5-nd8" firstAttribute="leading" secondItem="IA2-am-V2w" secondAttribute="trailing" constant="16" id="Tyh-g6-MJH"/>
+                                    <constraint firstItem="Sgj-6y-8BI" firstAttribute="top" secondItem="2EE-R2-i6x" secondAttribute="topMargin" constant="14" id="Ucx-5e-Y5T"/>
+                                    <constraint firstItem="Sgj-6y-8BI" firstAttribute="trailing" secondItem="2EE-R2-i6x" secondAttribute="trailingMargin" id="zCE-3A-gFX"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="durationLabel" destination="Sgj-6y-8BI" id="Ux0-Nz-YFt"/>
-                                    <outlet property="favoiteImage" destination="1hW-Op-wOj" id="aj8-EG-jyI"/>
                                     <outlet property="releaseDateLabel" destination="Bfz-dy-6xu" id="QZu-WK-zAx"/>
-                                    <outlet property="shareView" destination="dMR-eW-dJb" id="Wrz-w1-kEA"/>
                                     <outlet property="thumbnailImageView" destination="s4t-E7-8Kc" id="xUC-Mf-x3D"/>
                                     <outlet property="titleLabel" destination="UdU-40-4xu" id="rBi-UX-6UE"/>
                                 </connections>
@@ -143,16 +138,13 @@
                     </collectionView>
                     <navigationItem key="navigationItem" title="Videos" id="6eq-Hm-EHw" colorLabel="IBBuiltInLabel-Blue"/>
                     <keyCommands/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="mediaPlayer" destination="Ak5-69-HEL" id="fWi-pf-f4S"/>
+                        <outlet property="mediaPlayer" destination="Tto-Ro-jL7" id="wld-hg-VYV"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbP-FV-I0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2721" y="-178"/>
+            <point key="canvasLocation" x="2811" y="-213"/>
         </scene>
         <!--Social-->
         <scene sceneID="tfT-uj-rvo">
@@ -163,15 +155,15 @@
                         <viewControllerLayoutGuide type="bottom" id="2Uu-j0-3tA"/>
                     </layoutGuides>
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="f9B-IK-cw4">
-                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="socialBack@0.5x.png" translatesAutoresizingMaskIntoConstraints="NO" id="Pkd-z3-Z5P">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="-23" width="320" height="568"/>
                                 <gestureRecognizers/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIH-zM-FUY">
-                                <rect key="frame" x="210" y="344" width="61" height="60"/>
+                                <rect key="frame" x="210" y="321" width="61" height="60"/>
                                 <state key="normal" image="Instagram.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -180,7 +172,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GG0-VX-sjc">
-                                <rect key="frame" x="15" y="419" width="61" height="60"/>
+                                <rect key="frame" x="15" y="396" width="61" height="60"/>
                                 <state key="normal" image="Facebook.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -189,7 +181,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rt0-QY-eZ1">
-                                <rect key="frame" x="92" y="419" width="61" height="60"/>
+                                <rect key="frame" x="92" y="396" width="61" height="60"/>
                                 <state key="normal" image="Google +.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -198,7 +190,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXm-cr-8dH">
-                                <rect key="frame" x="168" y="419" width="61" height="60"/>
+                                <rect key="frame" x="168" y="396" width="61" height="60"/>
                                 <state key="normal" image="Blogger.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -207,7 +199,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mD-5Y-PZb">
-                                <rect key="frame" x="49" y="344" width="61" height="60"/>
+                                <rect key="frame" x="49" y="321" width="61" height="60"/>
                                 <state key="normal" image="Youtube.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -216,7 +208,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y15-TJ-LwZ">
-                                <rect key="frame" x="130" y="344" width="61" height="60"/>
+                                <rect key="frame" x="130" y="321" width="61" height="60"/>
                                 <state key="normal" image="Twitter.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -225,24 +217,24 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stay up to date with all our" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSt-We-6r2">
-                                <rect key="frame" x="63" y="264" width="194" height="21"/>
+                                <rect key="frame" x="63" y="232" width="194" height="21"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="latest projects" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S98-1R-uyf">
-                                <rect key="frame" x="107" y="283" width="102" height="21"/>
+                                <rect key="frame" x="107" y="251" width="102" height="21"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Follow us on Social Media" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0U-gB-onM">
-                                <rect key="frame" x="68" y="301" width="184" height="21"/>
+                                <rect key="frame" x="68" y="269" width="184" height="21"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsP-yh-Yu4">
-                                <rect key="frame" x="243" y="419" width="61" height="60"/>
+                                <rect key="frame" x="243" y="396" width="61" height="60"/>
                                 <state key="normal" image="Mail.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -251,10 +243,10 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Devin.png" translatesAutoresizingMaskIntoConstraints="NO" id="c8I-z8-BE4">
-                                <rect key="frame" x="82" y="93" width="153" height="153"/>
+                                <rect key="frame" x="82" y="70" width="153" height="153"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ8-xD-QYW">
-                                <rect key="frame" x="2" y="513" width="311" height="37"/>
+                                <rect key="frame" x="2" y="478" width="311" height="37"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                 <state key="normal" title="Meet the Rest of Team SuperTramp">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -266,46 +258,10 @@
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Social" id="KGK-4P-9Ih"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qn-hF-q0Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2752" y="473"/>
-        </scene>
-        <!--Login View Controller-->
-        <scene sceneID="wPS-FA-EtX">
-            <objects>
-                <viewController id="Cbn-zE-itW" customClass="LoginViewController" customModule="Devin_Supertramp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="WWe-xA-7xB"/>
-                        <viewControllerLayoutGuide type="bottom" id="hPI-li-ZIS"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="sKg-5H-joL">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wY-ku-8vf">
-                                <rect key="frame" x="59" y="261" width="202" height="46"/>
-                                <state key="normal" image="facebooklogin">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="signIn:" destination="Cbn-zE-itW" eventType="touchUpInside" id="5m1-8o-CaH"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo-14" translatesAutoresizingMaskIntoConstraints="NO" id="zjk-eS-28Z">
-                                <rect key="frame" x="0.0" y="52" width="320" height="168"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" cyan="0.97999999999999998" magenta="0.69000000000000006" yellow="0.42999999999999999" black="0.31" alpha="0.89000000000000001" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
-                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ko7-MN-sjT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="649" y="113"/>
+            <point key="canvasLocation" x="2776" y="538"/>
         </scene>
         <!--Videos-->
         <scene sceneID="LFe-eu-FRt">
@@ -313,7 +269,6 @@
                 <navigationController title="Videos" automaticallyAdjustsScrollViewInsets="NO" id="Z1V-uC-7U4" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Videos" id="4ta-6l-rqS"/>
                     <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="afv-Gz-NUg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -329,12 +284,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fvh-hb-p3C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2307" y="-178"/>
+            <point key="canvasLocation" x="2002" y="-178"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Tpa-HF-vKS">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="xON-8g-DaR" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="xON-8g-DaR" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Cj0-jR-Oyf">
@@ -349,15 +304,14 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FdI-Kn-zVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1642" y="113"/>
+            <point key="canvasLocation" x="1132" y="57"/>
         </scene>
         <!--Social-->
         <scene sceneID="95J-07-sxs">
             <objects>
-                <navigationController title="Social" automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnSwipe="YES" id="LOn-uV-RKD" sceneMemberID="viewController">
+                <navigationController title="Social" automaticallyAdjustsScrollViewInsets="NO" id="LOn-uV-RKD" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Social" id="oHp-Dz-09n"/>
                     <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rr6-lT-xCt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -373,23 +327,23 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zC0-sX-o6J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2307" y="473"/>
+            <point key="canvasLocation" x="2002" y="538"/>
         </scene>
     </scenes>
     <resources>
         <image name="Blogger.png" width="121" height="120"/>
         <image name="Devin.png" width="306" height="306"/>
+        <image name="EmailBottomIcon.png" width="70" height="70"/>
+        <image name="FBbottomIcon.png" width="70" height="70"/>
         <image name="Facebook.png" width="121" height="120"/>
-        <image name="Favorite@0.5x" width="49" height="48"/>
         <image name="Google +.png" width="121" height="119"/>
         <image name="Instagram.png" width="121" height="120"/>
         <image name="Mail.png" width="121" height="120"/>
-        <image name="Share@0.5x" width="44" height="52"/>
+        <image name="Rectangle 16.png" width="828" height="80"/>
         <image name="Twitter.png" width="123" height="120"/>
+        <image name="TwitterBottomIcon.png" width="70" height="70"/>
         <image name="Youtube.png" width="122" height="120"/>
-        <image name="blur@0.5x" width="320" height="97"/>
-        <image name="facebooklogin" width="202" height="46"/>
-        <image name="logo-14" width="477" height="253"/>
+        <image name="bottomBlur.png" width="828" height="80"/>
         <image name="socialBack@0.5x.png" width="320" height="568"/>
     </resources>
 </document>

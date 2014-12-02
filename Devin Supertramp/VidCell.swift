@@ -18,27 +18,19 @@ var sharedId = String()
 class VidCell: UICollectionViewCell {
     
     
-    @IBOutlet weak var shareView: UIView!
+   
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var releaseDateLabel: UILabel!
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var thumbnailImageView: UIImageView!
-    @IBOutlet weak var favoiteImage: UIButton!
-    
-    
-    @IBOutlet weak var shareTitleLabel: UILabel!
-    @IBOutlet weak var shareImageView: UIImageView!
-    
-    var cellVideoId = String()
+      var cellVideoId = String()
     
     
     override init() {
         super.init()
+         
         
-        
-        self.shareView.center.x = self.center.x - 320
-        self.shareView.center.y = self.center.y
-        self.shareView.hidden = true
+       
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -46,58 +38,33 @@ class VidCell: UICollectionViewCell {
     }
     
     
-    @IBAction func favorite(sender: AnyObject) {
-        println("Favorited \(self.titleLabel.text!)!")
+        //cancel the share
+    
+    @IBAction func cancelShare(sender: AnyObject) {
+       
+        sharing = false
+    
     }
     
-    @IBAction func share(sender: AnyObject) {
-        println("Shared \(self.titleLabel.text!)!")
-        
-        
-        //display the shareView
-        self.shareView.hidden = false
-        self.shareView.center = self.center
-        
-        //set the necessary data to global variables
-        sharing = true
+    @IBAction func sharedFB(sender: AnyObject) {
+       
+        sharing = false
         sharedTitle = self.titleLabel.text!
         sharedDate = self.releaseDateLabel.text!
         sharedImage = self.thumbnailImageView.image!
         //will also need video url as NSURL
         sharedId = self.cellVideoId
-        
-        self.center.y = 64
-        
-        
-        //set the image and title outlets in the shareView
-        //self.shareImageView.image = sharedImage
-        //self.shareTitleLabel.text = sharedTitle
-        
+
     }
     
-        //cancel the share
-    
-    @IBAction func cancelShare(sender: AnyObject) {
-        self.shareView.center.x = self.center.x - 320
-        self.shareView.center.y = self.center.y
-        self.shareView.hidden = true
-        sharing = false
-    
-    }
-    
-    
-    @IBAction func facebookPressed(sender: AnyObject) {
-        self.shareView.center.x = self.center.x - 320
-        self.shareView.center.y = self.center.y
-        self.shareView.hidden = true
-        sharing = false
-        
-    }
-    @IBAction func twitterPressed(sender: AnyObject) {
-        self.shareView.center.x = self.center.x - 320
-        self.shareView.center.y = self.center.y
-        self.shareView.hidden = true
-        sharing = false
+    @IBAction func sharedTwitter(sender: AnyObject) {
+            sharing = false
+        sharedTitle = self.titleLabel.text!
+        sharedDate = self.releaseDateLabel.text!
+        sharedImage = self.thumbnailImageView.image!
+        //will also need video url as NSURL
+        sharedId = self.cellVideoId
+
     }
 }
 

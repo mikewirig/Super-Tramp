@@ -10,10 +10,6 @@ import UIKit
 import Social
 
 let reuseIdentifier = "VidCell"
-func exitShare() {
-    
-}
-
 
 class VideosController: UICollectionViewController, YTPlayerViewDelegate {
     
@@ -27,51 +23,28 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
     var videoObjects = [AnyObject]()
     var refresher = UIRefreshControl()
     var url = NSURL()
+    var activityIndicator = UIActivityIndicatorView()
+    var bufferView = UIView()
+    var changingWidth = CGFloat()
+
     
-  
-    
-    
-    
-    @IBAction func shareVideo(sender: AnyObject) {
-        println("yay? shared \(sharedTitle) which was released \(sharedDate)")
-        
-    }
-    
-    @IBAction func twitterShare(sender: AnyObject) {
-        println("shared \(sharedTitle) to twitter")
-        
-        var twitterShare : SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-        
-        var sharedUrl = NSURL(string: "www.youtube.com/watch?v=" + sharedId)
-        twitterShare.setInitialText("Check out this sweet video! #teamsupertramp")
-        twitterShare.addURL(sharedUrl)
-        
-        
-        self.presentViewController(twitterShare, animated: true, completion: nil)
-    }
-    
-    @IBAction func facebookShare(sender: AnyObject) {
-        println("shared \(sharedTitle) to facebook")
-        
-        
-        var fbShare : SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
-        
-        var sharedUrl = NSURL(string: "www.youtube.com/watch?v=" + sharedId)
-        
-        fbShare.setInitialText("Check out this sweet video! #teamsupertramp")
-        fbShare.addURL(sharedUrl)
-        
-        
-        
-        self.presentViewController(fbShare, animated: true, completion: nil)
-        
-        
-    }
+    //share view that appears when video ends/done button pressed
+   
     
     @IBOutlet weak var mediaPlayer: YTPlayerView!
+           
+    
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
+                
+        let screenSize: CGRect = UIScreen.mainScreen().bounds
+        let screenWidth = screenSize.width;
+        let screenHeight = screenSize.height;
+        
+        self.changingWidth = screenWidth
+        
         
         sharing = false
         self.mediaPlayer.delegate = self
@@ -162,7 +135,6 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
         
         // Configure the cell
         
-        cell.shareView.hidden = true
         
         cell.titleLabel.text = self.titles[indexPath.row]
         cell.durationLabel.text = self.durs[indexPath.row]
@@ -172,9 +144,15 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
         cell.cellVideoId = self.youtubeIds[indexPath.row]
         cell.thumbnailImageView.sd_setImageWithURL(url)
         
-        cell.backgroundColor = UIColor.blackColor()
+            
+        cell.backgroundColor = UIColor.lightGrayColor()
         
         return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        
+        return CGSizeMake(changingWidth, 275)
     }
     
     
@@ -182,7 +160,7 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
         
         if sharing == false {
             
-            
+            sharedId = self.youtubeIds[indexPath.row]
             self.mediaPlayer.hidden = false
             self.mediaPlayer.loadWithVideoId(self.youtubeIds[indexPath.row])
             println("cell \(indexPath.row)")
@@ -206,16 +184,43 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
         switch state.value {
         case kYTPlayerStatePaused.value:
             println("playerView is paused/done was pressed")
+            self.mediaPlayer.hidden = true
+            
             
         case kYTPlayerStatePlaying.value:
             println("playerView is playing")
-
+            
+            if self.activityIndicator.isAnimating(){
+            self.activityIndicator.stopAnimating()
+            }
+            
+            if UIApplication.sharedApplication().isIgnoringInteractionEvents() {
+            UIApplication.sharedApplication().endIgnoringInteractionEvents()
+            }
+            
+            self.bufferView.hidden = true
         case kYTPlayerStateEnded.value:
             println("playerView ended")
             
         case kYTPlayerStateBuffering.value:
             println("playerView is buffering")
-
+            
+            self.bufferView.hidden = false
+            self.bufferView.frame = self.view.frame
+            self.bufferView.center = self.view.center
+            self.bufferView.backgroundColor = UIColor.grayColor().colorWithAlphaComponent(0.6)
+            self.view.addSubview(bufferView)
+            
+            
+            self.activityIndicator.frame = CGRectMake(0, 0, 120, 120)
+            self.activityIndicator.center = self.view.center
+            self.activityIndicator.hidesWhenStopped = true
+            self.activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.WhiteLarge
+            self.bufferView.addSubview(activityIndicator)
+            self.activityIndicator.startAnimating()
+            UIApplication.sharedApplication().beginIgnoringInteractionEvents()
+            
+            
         case kYTPlayerStateUnstarted.value:
             println("playerView is unstarted")
         
@@ -223,7 +228,6 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
             println("playerView State changed")
 
         }
-        //use a switch here to do blocks of code for each player state
         
     }
     
@@ -231,25 +235,44 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
         self.mediaPlayer.playVideo()
     }
     
+    //social sharing code
     
+    @IBAction func twitterShare(sender: AnyObject) {
+        println("shared \(sharedTitle) to twitter")
+        
+        var twitterShare : SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+        
+        var sharedUrl = NSURL(string: "www.youtube.com/watch?v=" + sharedId)
+        twitterShare.setInitialText("Check out this sweet video! #teamsupertramp")
+        twitterShare.addURL(sharedUrl)
+        
+        
+        self.presentViewController(twitterShare, animated: true, completion: nil)
+    }
     
+    @IBAction func facebookShare(sender: AnyObject) {
+        println("shared \(sharedTitle) to facebook")
+        
+        
+        var fbShare : SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+        
+        var sharedUrl = NSURL(string: "www.youtube.com/watch?v=" + sharedId)
+        
+        fbShare.setInitialText("Check out this sweet video! #teamsupertramp")
+        fbShare.addURL(sharedUrl)
+        
+        
+        
+        self.presentViewController(fbShare, animated: true, completion: nil)
+        
+        
+    }
+
     
     // MARK: UICollectionViewDelegate
     
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    func collectionView(collectionView: UICollectionView!, shouldHighlightItemAtIndexPath indexPath: NSIndexPath!) -> Bool {
-    return true
-    }
-    */
     
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    func collectionView(collectionView: UICollectionView!, shouldSelectItemAtIndexPath indexPath: NSIndexPath!) -> Bool {
-    return true
-    }
-    */
-    
+        
     /*
     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
     func collectionView(collectionView: UICollectionView!, shouldShowMenuForItemAtIndexPath indexPath: NSIndexPath!) -> Bool {
