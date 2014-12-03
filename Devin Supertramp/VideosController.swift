@@ -21,7 +21,6 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
     var dates = [String]()
     var youtubeIds = [String]()
     var videoObjects = [AnyObject]()
-//    var refresher = UIRefreshControl()
     var url = NSURL()
     var activityIndicator = UIActivityIndicatorView()
     var bufferView = UIView()
@@ -65,22 +64,6 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
         
         shouldAutorotate()
         
-<<<<<<< HEAD
-        
-//        //pull to refresh initialized
-//        refresher = UIRefreshControl()
-//        refresher.attributedTitle = NSAttributedString(string: "Pull to Refresh")
-//        refresher.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
-//        self.collectionView.addSubview(refresher)
-=======
-        //pull to refresh initialized
-        refresher = UIRefreshControl()
-        refresher.attributedTitle = NSAttributedString(string: "Pull to Refresh")
-        refresher.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
-        self.collectionView.addSubview(refresher)
-        
-
->>>>>>> FETCH_HEAD
     }
     
     
@@ -120,20 +103,9 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
                 NSLog("Error: %@ %@", error, error.userInfo!)
             }
             
-//            self.refresher.endRefreshing()
         }//end query
         
     }
-    
-    
-    
-//    func refresh() {
-//        
-//        self.updateView()
-//        println("refreshed")
-//        
-//    }
-//    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -223,10 +195,8 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
             UIApplication.sharedApplication().endIgnoringInteractionEvents()
             }
             self.mediaPlayer.hidden = false
-<<<<<<< HEAD
+
             
-=======
->>>>>>> FETCH_HEAD
             self.bufferView.hidden = true
         case kYTPlayerStateEnded.value:
             println("playerView ended")
