@@ -32,16 +32,7 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
     
     @IBOutlet weak var mediaPlayer: YTPlayerView!
            
-    override func shouldAutorotate() -> Bool {
-        
-        return true
-    }
-    
-    override func supportedInterfaceOrientations() -> Int {
-        println("second supported")
-        return Int(UIInterfaceOrientationMask.Landscape.rawValue)
-    }
-   
+
     
     override func viewDidLoad() {
         
@@ -62,7 +53,7 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
         self.mediaPlayer.hidden = true
         self.updateView()
         
-        shouldAutorotate()
+       
         
     }
     

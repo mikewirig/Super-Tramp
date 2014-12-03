@@ -22,16 +22,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         PFFacebookUtils.initializeFacebook()
         
         
-        var pushSettings : UIUserNotificationSettings = UIUserNotificationSettings(forTypes: .Alert, categories: nil)
-        
-        application.registerUserNotificationSettings(pushSettings)
-        application.registerForRemoteNotifications()
+        let notificationTypes:UIUserNotificationType = UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound
+        let notificationSettings:UIUserNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: nil)
+//        var pushSettings : UIUserNotificationSettings = UIUserNotificationSettings(forTypes: .Alert, categories: nil)
+//        
+//        application.registerUserNotificationSettings(pushSettings)
+//        application.registerForRemoteNotifications()
+//        
+        UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
         return true
     }
     
     
+    func application(application: UIApplication!, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings!){
+        UIApplication.sharedApplication().registerForRemoteNotifications()
+    }
+    
     func application( application: UIApplication!, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData! ) {
         
+        let currentInstallation:PFInstallation = PFInstallation.currentInstallation()
+        currentInstallation.setDeviceTokenFromData(deviceToken)
+        currentInstallation.saveInBackground()
         println("Success")
         
         
