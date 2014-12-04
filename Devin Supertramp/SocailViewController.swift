@@ -9,8 +9,6 @@
 import UIKit
 
 class SocailViewController: UIViewController {
-
- 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,9 +25,9 @@ class SocailViewController: UIViewController {
         
         println("Subscribed to Youtube Channel")
         
-        if UIApplication.sharedApplication().canOpenURL(NSURL(string: "youtube://channel/devinsupertramp")!){
+        if UIApplication.sharedApplication().canOpenURL(NSURL(string: "youtube:///www.youtube.com/user/devinsupertramp")!){
             
-            UIApplication.sharedApplication().openURL(NSURL(string: "youtube://channel/devinsupertramp")!)
+            UIApplication.sharedApplication().openURL(NSURL(string: "youtube://www.youtube.com/user/devinsupertramp")!)
             
         } else {
             
@@ -67,6 +65,20 @@ class SocailViewController: UIViewController {
        
     }
    
+    @IBAction func chronoSubscribe(sender: AnyObject) {
+        println("subscribed to Chrono")
+        
+        if UIApplication.sharedApplication().canOpenURL(NSURL(string: "youtube:///www.youtube.com/user/chronomotion")!){
+            
+            UIApplication.sharedApplication().openURL(NSURL(string: "youtube://www.youtube.com/user/chronomotion")!)
+            
+        } else {
+            
+            UIApplication.sharedApplication().openURL(NSURL(string: "https://www.youtube.com/channel/chronomotion")!)
+        }
+
+        
+    }
   
     @IBAction func facebookFollow(sender: AnyObject) {
         println("Liked Facebook page")
@@ -80,8 +92,6 @@ class SocailViewController: UIViewController {
             UIApplication.sharedApplication().openURL(NSURL(string: "https://www.facebook.com/devinsupertrampyoutube?fref=ts")!)
         }
     }
-    
-    
   
     @IBAction func googleFollow(sender: AnyObject) {
         println("Followed on Google+")
@@ -96,8 +106,6 @@ class SocailViewController: UIViewController {
         }
 
     }
-    
-    
    
     @IBAction func blogFollow(sender: AnyObject) {
         println("Followed the Blog")
@@ -109,9 +117,9 @@ class SocailViewController: UIViewController {
    
     @IBAction func sendEmail(sender: AnyObject) {
         println("Sent an Email")
+        UIApplication.sharedApplication().openURL(NSURL(string: "mailto:devinsupertramp@gmail.com")!)
         
-        UIApplication.sharedApplication().openURL(NSURL(string:"twitter://post?message=Check%20out%20this%20awesome%20video!")!)
-    }
+           }
     
     /*
     // MARK: - Navigation
@@ -122,26 +130,5 @@ class SocailViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-//    twitter://user?screen_name=lorenb
-//    
-//    twitter://user?id=12345
-//    
-//    twitter://status?id=12345
-//    
-//    twitter://timeline
-//    
-//    twitter://mentions
-//    
-//    twitter://messages
-//    
-//    twitter://list?screen_name=lorenb&slug=abcd
-//    
-//    twitter://post?message=hello%20world
-//    
-//    twitter://post?message=hello%20world&in_reply_to_status_id=12345
-//    
-//    twitter://search?query=%23hashtag
-    //"twitter://post?message="https://www.youtube.com/watch?v=oc1HDF2AyNE"
 
 }

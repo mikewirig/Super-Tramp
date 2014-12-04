@@ -112,6 +112,10 @@
                                             <state key="normal" image="EmailBottomIcon.png">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <action selector="emailShare:" destination="sZr-zt-sFG" eventType="touchUpInside" id="xJC-dQ-mse"/>
+                                                <action selector="sharedEmail:" destination="2EE-R2-i6x" eventType="touchUpInside" id="w6m-V9-JUq"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -163,7 +167,7 @@
                                 <gestureRecognizers/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIH-zM-FUY">
-                                <rect key="frame" x="210" y="321" width="61" height="60"/>
+                                <rect key="frame" x="168" y="321" width="61" height="60"/>
                                 <state key="normal" image="Instagram.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -199,7 +203,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mD-5Y-PZb">
-                                <rect key="frame" x="49" y="321" width="61" height="60"/>
+                                <rect key="frame" x="16" y="321" width="61" height="60"/>
                                 <state key="normal" image="Youtube.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -208,7 +212,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y15-TJ-LwZ">
-                                <rect key="frame" x="130" y="321" width="61" height="60"/>
+                                <rect key="frame" x="92" y="321" width="61" height="60"/>
                                 <state key="normal" image="Twitter.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -252,6 +256,15 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="979-8b-Pjw">
+                                <rect key="frame" x="243" y="321" width="61" height="60"/>
+                                <state key="normal" image="ChronoIcon.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chronoSubscribe:" destination="U7L-eh-NX3" eventType="touchUpInside" id="yvG-ai-nBF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -332,6 +345,7 @@
     </scenes>
     <resources>
         <image name="Blogger.png" width="121" height="120"/>
+        <image name="ChronoIcon.png" width="122" height="120"/>
         <image name="Devin.png" width="306" height="306"/>
         <image name="EmailBottomIcon.png" width="70" height="70"/>
         <image name="FBbottomIcon.png" width="70" height="70"/>

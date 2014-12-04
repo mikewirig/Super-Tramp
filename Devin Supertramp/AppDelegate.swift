@@ -29,6 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        application.registerUserNotificationSettings(pushSettings)
 //        application.registerForRemoteNotifications()
 //        
+        
+        
         UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
         return true
     }
@@ -43,6 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let currentInstallation:PFInstallation = PFInstallation.currentInstallation()
         currentInstallation.setDeviceTokenFromData(deviceToken)
         currentInstallation.saveInBackground()
+        
         println("Success")
         
         
@@ -70,6 +73,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         FBAppCall.handleDidBecomeActiveWithSession(PFFacebookUtils.session())
+        
+        //clear notification badge when app is opened
+        var currentInstallation = PFInstallation.currentInstallation()
+        if  currentInstallation.badge != 0 {
+            currentInstallation.badge = 0
+            currentInstallation.saveEventually()
+        }
     }
     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {

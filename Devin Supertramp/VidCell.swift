@@ -28,7 +28,7 @@ class VidCell: UICollectionViewCell {
     
     override init() {
         super.init()
-         
+        
         
        
     }
@@ -65,6 +65,16 @@ class VidCell: UICollectionViewCell {
         //will also need video url as NSURL
         sharedId = self.cellVideoId
 
+    }
+    
+    @IBAction func sharedEmail(sender: AnyObject) {
+        sharing = false
+        sharedTitle = self.titleLabel.text!
+        sharedDate = self.releaseDateLabel.text!
+        sharedImage = self.thumbnailImageView.image!
+        //will also need video url as NSURL
+        sharedId = self.cellVideoId
+        
     }
 }
 

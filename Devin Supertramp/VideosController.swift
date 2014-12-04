@@ -33,28 +33,20 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
     @IBOutlet weak var mediaPlayer: YTPlayerView!
            
 
-    
+    //view did load function
     override func viewDidLoad() {
-        
-        
-        
         super.viewDidLoad()
        
-      
         let screenSize: CGRect = UIScreen.mainScreen().bounds
         let screenWidth = screenSize.width;
         let screenHeight = screenSize.height;
         
         self.changingWidth = screenWidth
         
-        
         sharing = false
         self.mediaPlayer.delegate = self
         self.mediaPlayer.hidden = true
         self.updateView()
-        
-       
-        
     }
     
     
@@ -122,8 +114,7 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as VidCell
         
         // Configure the cell
-        
-        
+    
         cell.titleLabel.text = self.titles[indexPath.row]
         cell.durationLabel.text = self.durs[indexPath.row]
         cell.releaseDateLabel.text = self.dates[indexPath.row]
@@ -143,7 +134,6 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
         return CGSizeMake(changingWidth, 275)
     }
     
-    
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
         if sharing == false {
@@ -156,7 +146,6 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
             
         } else {
             
-           
             println("cancel sharing before viewing video")
             
             sharing = false
@@ -165,7 +154,7 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
             
         }
     }
-    
+    //This function handles everything that happens when the mediaplayer changes states
     func playerView(playerView: YTPlayerView!, didChangeToState state: YTPlayerState) {
         println("Changed State")
         
@@ -254,16 +243,16 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
         
         
         self.presentViewController(fbShare, animated: true, completion: nil)
-        
-        
+
     }
 
     @IBAction func emailShare(sender: AnyObject) {
         println("shared to email")
+        println(sharedId)
         
         var address = " "
         var subject = "Check out this Awesome Video!"
-        var body =  "www.youtube.com/watch?v=" + sharedId
+        var body =  "www.youtube.com/watch?v=\(sharedId)"
         var path = "mailto:\(address)?&subject=\(subject)&body=\(body)"
         println(path)
         var url = NSURL(string: path.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)
