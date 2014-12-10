@@ -12,6 +12,7 @@ var sharedTitle = String()
 var sharedDate = String()
 var sharedImage = UIImage()
 var sharing = Bool()
+var canRotate = Bool()
 var sharedId = String()
 
 
@@ -69,11 +70,12 @@ class VidCell: UICollectionViewCell {
     
     @IBAction func sharedEmail(sender: AnyObject) {
         sharing = false
+        sharedId = self.cellVideoId
         sharedTitle = self.titleLabel.text!
         sharedDate = self.releaseDateLabel.text!
         sharedImage = self.thumbnailImageView.image!
         //will also need video url as NSURL
-        sharedId = self.cellVideoId
+        
         
     }
 }

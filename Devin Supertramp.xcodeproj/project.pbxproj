@@ -39,7 +39,17 @@
 		F510EABF19CB721600C946B9 /* VideosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F510EABE19CB721600C946B9 /* VideosController.swift */; };
 		F53A051A1A1E7AF800D7E755 /* Rectangle 16@0.5x.png in Resources */ = {isa = PBXBuildFile; fileRef = F53A05181A1E7AF800D7E755 /* Rectangle 16@0.5x.png */; };
 		F53A051B1A1E7AF800D7E755 /* Rectangle 16.png in Resources */ = {isa = PBXBuildFile; fileRef = F53A05191A1E7AF800D7E755 /* Rectangle 16.png */; };
+		F55DE9F71A3283B0000C5015 /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE9F61A3283B0000C5015 /* TabController.swift */; };
 		F5711DB019F568240041CBA9 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5711DAF19F568240041CBA9 /* Social.framework */; };
+		F59922F01A377D6300F4D9A3 /* socialBg@0.5x.png in Resources */ = {isa = PBXBuildFile; fileRef = F59922EE1A377D6300F4D9A3 /* socialBg@0.5x.png */; };
+		F59922F11A377D6300F4D9A3 /* socialBg.png in Resources */ = {isa = PBXBuildFile; fileRef = F59922EF1A377D6300F4D9A3 /* socialBg.png */; };
+		F59922F41A3796C100F4D9A3 /* dakotaIcon@0.5x.png in Resources */ = {isa = PBXBuildFile; fileRef = F59922F21A3796C100F4D9A3 /* dakotaIcon@0.5x.png */; };
+		F59922F51A3796C100F4D9A3 /* dakotaIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F59922F31A3796C100F4D9A3 /* dakotaIcon.png */; };
+		F59922FC1A37973800F4D9A3 /* parkerIcon@0.5x.png in Resources */ = {isa = PBXBuildFile; fileRef = F59922FA1A37973800F4D9A3 /* parkerIcon@0.5x.png */; };
+		F59922FD1A37973800F4D9A3 /* parkerIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F59922FB1A37973800F4D9A3 /* parkerIcon.png */; };
+		F59923001A37980E00F4D9A3 /* teamBackg@0.5x.png in Resources */ = {isa = PBXBuildFile; fileRef = F59922FE1A37980E00F4D9A3 /* teamBackg@0.5x.png */; };
+		F59923011A37980E00F4D9A3 /* teamBackg.png in Resources */ = {isa = PBXBuildFile; fileRef = F59922FF1A37980E00F4D9A3 /* teamBackg.png */; };
+		F59923031A37CD1300F4D9A3 /* teamSupertrampController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59923021A37CD1300F4D9A3 /* teamSupertrampController.swift */; };
 		F59A69C91A094F8E00505817 /* SocailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59A69C81A094F8E00505817 /* SocailViewController.swift */; };
 		F5B44C451A2E63AA00BCBF89 /* ChronoIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F5B44C431A2E63AA00BCBF89 /* ChronoIcon.png */; };
 		F5B44C461A2E63AA00BCBF89 /* ChronoIcon@0.5x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5B44C441A2E63AA00BCBF89 /* ChronoIcon@0.5x.png */; };
@@ -114,7 +124,17 @@
 		F510EABE19CB721600C946B9 /* VideosController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideosController.swift; sourceTree = "<group>"; };
 		F53A05181A1E7AF800D7E755 /* Rectangle 16@0.5x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rectangle 16@0.5x.png"; sourceTree = "<group>"; };
 		F53A05191A1E7AF800D7E755 /* Rectangle 16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rectangle 16.png"; sourceTree = "<group>"; };
+		F55DE9F61A3283B0000C5015 /* TabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
 		F5711DAF19F568240041CBA9 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		F59922EE1A377D6300F4D9A3 /* socialBg@0.5x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "socialBg@0.5x.png"; sourceTree = "<group>"; };
+		F59922EF1A377D6300F4D9A3 /* socialBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = socialBg.png; sourceTree = "<group>"; };
+		F59922F21A3796C100F4D9A3 /* dakotaIcon@0.5x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dakotaIcon@0.5x.png"; sourceTree = "<group>"; };
+		F59922F31A3796C100F4D9A3 /* dakotaIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dakotaIcon.png; sourceTree = "<group>"; };
+		F59922FA1A37973800F4D9A3 /* parkerIcon@0.5x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "parkerIcon@0.5x.png"; sourceTree = "<group>"; };
+		F59922FB1A37973800F4D9A3 /* parkerIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = parkerIcon.png; sourceTree = "<group>"; };
+		F59922FE1A37980E00F4D9A3 /* teamBackg@0.5x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "teamBackg@0.5x.png"; sourceTree = "<group>"; };
+		F59922FF1A37980E00F4D9A3 /* teamBackg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teamBackg.png; sourceTree = "<group>"; };
+		F59923021A37CD1300F4D9A3 /* teamSupertrampController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = teamSupertrampController.swift; sourceTree = "<group>"; };
 		F59A69C81A094F8E00505817 /* SocailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocailViewController.swift; sourceTree = "<group>"; };
 		F5B44C431A2E63AA00BCBF89 /* ChronoIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChronoIcon.png; sourceTree = "<group>"; };
 		F5B44C441A2E63AA00BCBF89 /* ChronoIcon@0.5x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ChronoIcon@0.5x.png"; sourceTree = "<group>"; };
@@ -199,6 +219,8 @@
 				F50FC1C51A2416F40002CA76 /* bottomBlur@0.5x.png */,
 				F50FC1C61A2416F40002CA76 /* bottomBlur.png */,
 				F5D8C9B41A11C9A9004FDA7E /* Youtube.png */,
+				F59922EE1A377D6300F4D9A3 /* socialBg@0.5x.png */,
+				F59922EF1A377D6300F4D9A3 /* socialBg.png */,
 				F5D8C9B51A11C9A9004FDA7E /* Twitter@0.5x.png */,
 				F5D8C9BB1A11C9D6004FDA7E /* Mail@0.5x.png */,
 				F5D8C9BC1A11C9D6004FDA7E /* Mail.png */,
@@ -206,15 +228,21 @@
 				F5B44C441A2E63AA00BCBF89 /* ChronoIcon@0.5x.png */,
 				F5D8C9BD1A11C9D6004FDA7E /* Instagram@0.5x.png */,
 				F5D8C9BE1A11C9D6004FDA7E /* Instagram.png */,
+				F59922FA1A37973800F4D9A3 /* parkerIcon@0.5x.png */,
+				F59922FB1A37973800F4D9A3 /* parkerIcon.png */,
 				F5D8C9BF1A11C9D6004FDA7E /* Google +@0.5x.png */,
 				F5D8C9C01A11C9D6004FDA7E /* Google +.png */,
 				F5D8C9C11A11C9D6004FDA7E /* Facebook@0.5x.png */,
 				F5D8C9C21A11C9D6004FDA7E /* Facebook.png */,
+				F59922FE1A37980E00F4D9A3 /* teamBackg@0.5x.png */,
+				F59922FF1A37980E00F4D9A3 /* teamBackg.png */,
 				F5D8C9C31A11C9D6004FDA7E /* Devin@0.5x.png */,
 				F5D8C9C41A11C9D6004FDA7E /* Devin.png */,
 				F5D8C9C51A11C9D6004FDA7E /* Blogger@0.5x.png */,
 				F5D8C9C61A11C9D6004FDA7E /* Blogger.png */,
 				F5D8C9B61A11C9A9004FDA7E /* Twitter.png */,
+				F59922F21A3796C100F4D9A3 /* dakotaIcon@0.5x.png */,
+				F59922F31A3796C100F4D9A3 /* dakotaIcon.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -270,6 +298,8 @@
 				F510EABE19CB721600C946B9 /* VideosController.swift */,
 				F59A69C81A094F8E00505817 /* SocailViewController.swift */,
 				F50E9BB219D2167800B3E0D7 /* VidCell.swift */,
+				F59923021A37CD1300F4D9A3 /* teamSupertrampController.swift */,
+				F55DE9F61A3283B0000C5015 /* TabController.swift */,
 				F510EA9C19CB6A3600C946B9 /* Main.storyboard */,
 				F50E9BEA19D3303300B3E0D7 /* Devin Supertramp-Bridging-Header.h */,
 				F510EA9F19CB6A3600C946B9 /* Images.xcassets */,
@@ -397,6 +427,7 @@
 				F5D8C9CF1A11C9D6004FDA7E /* Devin@0.5x.png in Resources */,
 				F5D8C9B91A11C9A9004FDA7E /* Twitter@0.5x.png in Resources */,
 				F5D8C9D21A11C9D6004FDA7E /* Blogger.png in Resources */,
+				F59922FD1A37973800F4D9A3 /* parkerIcon.png in Resources */,
 				F5D8C9D01A11C9D6004FDA7E /* Devin.png in Resources */,
 				F5D8C9CD1A11C9D6004FDA7E /* Facebook@0.5x.png in Resources */,
 				F50FC1BD1A24164F0002CA76 /* FBbottomIcon@0.5x.png in Resources */,
@@ -404,10 +435,14 @@
 				F510EAA319CB6A3600C946B9 /* LaunchScreen.xib in Resources */,
 				F5D8C9C91A11C9D6004FDA7E /* Instagram@0.5x.png in Resources */,
 				F5D8C9CE1A11C9D6004FDA7E /* Facebook.png in Resources */,
+				F59922FC1A37973800F4D9A3 /* parkerIcon@0.5x.png in Resources */,
+				F59922F11A377D6300F4D9A3 /* socialBg.png in Resources */,
 				F510EAA019CB6A3600C946B9 /* Images.xcassets in Resources */,
 				F5D8C9BA1A11C9A9004FDA7E /* Twitter.png in Resources */,
 				F53A051B1A1E7AF800D7E755 /* Rectangle 16.png in Resources */,
 				F5D8C9D51A11CA2F004FDA7E /* socialBack.png in Resources */,
+				F59922F01A377D6300F4D9A3 /* socialBg@0.5x.png in Resources */,
+				F59923001A37980E00F4D9A3 /* teamBackg@0.5x.png in Resources */,
 				F5B44C451A2E63AA00BCBF89 /* ChronoIcon.png in Resources */,
 				F5D8C9CB1A11C9D6004FDA7E /* Google +@0.5x.png in Resources */,
 				F5D8C9CC1A11C9D6004FDA7E /* Google +.png in Resources */,
@@ -415,8 +450,11 @@
 				F5D8C9B71A11C9A9004FDA7E /* Youtube@0.5x.png in Resources */,
 				F50FC1C01A24164F0002CA76 /* EmailBottomIcon.png in Resources */,
 				F50FC1BE1A24164F0002CA76 /* FBbottomIcon.png in Resources */,
+				F59922F51A3796C100F4D9A3 /* dakotaIcon.png in Resources */,
 				F5B44C461A2E63AA00BCBF89 /* ChronoIcon@0.5x.png in Resources */,
 				F5D8C9C71A11C9D6004FDA7E /* Mail@0.5x.png in Resources */,
+				F59923011A37980E00F4D9A3 /* teamBackg.png in Resources */,
+				F59922F41A3796C100F4D9A3 /* dakotaIcon@0.5x.png in Resources */,
 				F53A051A1A1E7AF800D7E755 /* Rectangle 16@0.5x.png in Resources */,
 				F5D8C9B81A11C9A9004FDA7E /* Youtube.png in Resources */,
 				F50FC1BF1A24164F0002CA76 /* EmailBottomIcon@0.5x.png in Resources */,
@@ -472,11 +510,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F55DE9F71A3283B0000C5015 /* TabController.swift in Sources */,
 				F50E9BB319D2167800B3E0D7 /* VidCell.swift in Sources */,
 				F510EA9619CB6A3600C946B9 /* AppDelegate.swift in Sources */,
 				F510EABF19CB721600C946B9 /* VideosController.swift in Sources */,
 				F510EA9919CB6A3600C946B9 /* Devin_Supertramp.xcdatamodeld in Sources */,
 				F59A69C91A094F8E00505817 /* SocailViewController.swift in Sources */,
+				F59923031A37CD1300F4D9A3 /* teamSupertrampController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

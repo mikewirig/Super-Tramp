@@ -148,7 +148,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbP-FV-I0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2811" y="-213"/>
+            <point key="canvasLocation" x="987" y="-1082"/>
         </scene>
         <!--Social-->
         <scene sceneID="tfT-uj-rvo">
@@ -162,12 +162,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="socialBack@0.5x.png" translatesAutoresizingMaskIntoConstraints="NO" id="Pkd-z3-Z5P">
-                                <rect key="frame" x="0.0" y="-23" width="320" height="568"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="socialBg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Pkd-z3-Z5P">
+                                <rect key="frame" x="93" y="-23" width="414" height="623"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="623" id="HtL-u3-Mhu"/>
+                                    <constraint firstAttribute="width" constant="414" id="izR-3W-YXp"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIH-zM-FUY">
-                                <rect key="frame" x="168" y="321" width="61" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIH-zM-FUY">
+                                <rect key="frame" x="309" y="335" width="61" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="QiE-Cw-jyW"/>
+                                    <constraint firstAttribute="height" constant="60" id="Rjf-sb-dNg"/>
+                                </constraints>
                                 <state key="normal" image="Instagram.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -175,8 +183,12 @@
                                     <action selector="intsagramFollow:" destination="U7L-eh-NX3" eventType="touchUpInside" id="vrC-dJ-2AW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GG0-VX-sjc">
-                                <rect key="frame" x="15" y="396" width="61" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GG0-VX-sjc">
+                                <rect key="frame" x="156" y="410" width="61" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="Djt-ce-KDp"/>
+                                    <constraint firstAttribute="height" constant="60" id="QY1-uF-AyL"/>
+                                </constraints>
                                 <state key="normal" image="Facebook.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -184,17 +196,12 @@
                                     <action selector="facebookFollow:" destination="U7L-eh-NX3" eventType="touchUpInside" id="Ekc-Zf-npJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rt0-QY-eZ1">
-                                <rect key="frame" x="92" y="396" width="61" height="60"/>
-                                <state key="normal" image="Google +.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="googleFollow:" destination="U7L-eh-NX3" eventType="touchUpInside" id="jnj-kB-YiS"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXm-cr-8dH">
-                                <rect key="frame" x="168" y="396" width="61" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXm-cr-8dH">
+                                <rect key="frame" x="309" y="410" width="61" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="5kb-ve-MxW"/>
+                                    <constraint firstAttribute="height" constant="60" id="eod-X2-mdP"/>
+                                </constraints>
                                 <state key="normal" image="Blogger.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -202,8 +209,12 @@
                                     <action selector="blogFollow:" destination="U7L-eh-NX3" eventType="touchUpInside" id="mTV-WY-NVW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mD-5Y-PZb">
-                                <rect key="frame" x="16" y="321" width="61" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mD-5Y-PZb">
+                                <rect key="frame" x="156" y="335" width="61" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="7E9-fX-jZr"/>
+                                    <constraint firstAttribute="height" constant="60" id="vg2-jT-Gpi"/>
+                                </constraints>
                                 <state key="normal" image="Youtube.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -211,8 +222,12 @@
                                     <action selector="youTubeSubscribe:" destination="U7L-eh-NX3" eventType="touchUpInside" id="6Uc-JC-hKO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y15-TJ-LwZ">
-                                <rect key="frame" x="92" y="321" width="61" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y15-TJ-LwZ">
+                                <rect key="frame" x="233" y="335" width="61" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="9K4-Nh-JMY"/>
+                                    <constraint firstAttribute="width" constant="61" id="I1b-mI-lJm"/>
+                                </constraints>
                                 <state key="normal" image="Twitter.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -220,25 +235,41 @@
                                     <action selector="twitterFollow:" destination="U7L-eh-NX3" eventType="touchUpInside" id="Yzy-s0-zPU"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stay up to date with all our" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSt-We-6r2">
-                                <rect key="frame" x="63" y="232" width="194" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stay up to date with all our" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSt-We-6r2">
+                                <rect key="frame" x="203" y="260" width="194" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="194" id="lXz-kY-EOG"/>
+                                    <constraint firstAttribute="height" constant="21" id="yrS-DK-eRc"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="latest projects" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S98-1R-uyf">
-                                <rect key="frame" x="107" y="251" width="102" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="latest projects" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S98-1R-uyf">
+                                <rect key="frame" x="249" y="278" width="102" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="g0g-w9-QRU"/>
+                                    <constraint firstAttribute="width" constant="102" id="zOC-Ok-jPz"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Follow us on Social Media" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0U-gB-onM">
-                                <rect key="frame" x="68" y="269" width="184" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Follow us on Social Media" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0U-gB-onM">
+                                <rect key="frame" x="208" y="296" width="184" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="cfb-GT-uJg"/>
+                                    <constraint firstAttribute="width" constant="184" id="nGX-hj-nIn"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsP-yh-Yu4">
-                                <rect key="frame" x="243" y="396" width="61" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsP-yh-Yu4">
+                                <rect key="frame" x="384" y="410" width="61" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Xiu-CR-KVt"/>
+                                    <constraint firstAttribute="width" constant="61" id="zGf-5M-huj"/>
+                                </constraints>
                                 <state key="normal" image="Mail.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -246,19 +277,19 @@
                                     <action selector="sendEmail:" destination="U7L-eh-NX3" eventType="touchUpInside" id="mlX-hW-aai"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Devin.png" translatesAutoresizingMaskIntoConstraints="NO" id="c8I-z8-BE4">
-                                <rect key="frame" x="82" y="70" width="153" height="153"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Devin.png" translatesAutoresizingMaskIntoConstraints="NO" id="c8I-z8-BE4">
+                                <rect key="frame" x="224" y="99" width="153" height="153"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="153" id="4BV-xP-VgS"/>
+                                    <constraint firstAttribute="width" constant="153" id="l0h-CD-tjK"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ8-xD-QYW">
-                                <rect key="frame" x="2" y="478" width="311" height="37"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
-                                <state key="normal" title="Meet the Rest of Team SuperTramp">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="979-8b-Pjw">
-                                <rect key="frame" x="243" y="321" width="61" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="979-8b-Pjw">
+                                <rect key="frame" x="384" y="335" width="61" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="8sD-KY-pUu"/>
+                                    <constraint firstAttribute="height" constant="60" id="Qdc-qO-x07"/>
+                                </constraints>
                                 <state key="normal" image="ChronoIcon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -266,15 +297,387 @@
                                     <action selector="chronoSubscribe:" destination="U7L-eh-NX3" eventType="touchUpInside" id="yvG-ai-nBF"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rt0-QY-eZ1">
+                                <rect key="frame" x="233" y="410" width="61" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="B8z-f2-uS4"/>
+                                    <constraint firstAttribute="width" constant="61" id="c1A-qh-8Tw"/>
+                                </constraints>
+                                <state key="normal" image="Google +.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="googleFollow:" destination="U7L-eh-NX3" eventType="touchUpInside" id="jnj-kB-YiS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ8-xD-QYW">
+                                <rect key="frame" x="145" y="500" width="311" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="0wI-ra-ckg"/>
+                                    <constraint firstAttribute="width" constant="311" id="ciy-bZ-H2r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <state key="normal" title="Meet the Rest of Team SuperTramp">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Jou-Jf-Eje" kind="show" id="wZ2-8O-b75"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c8I-z8-BE4" firstAttribute="leading" secondItem="Pkd-z3-Z5P" secondAttribute="trailing" constant="-283" id="1gK-2b-BFe"/>
+                            <constraint firstItem="TIH-zM-FUY" firstAttribute="leading" secondItem="y15-TJ-LwZ" secondAttribute="trailing" constant="15" id="2Qt-JG-8za"/>
+                            <constraint firstItem="979-8b-Pjw" firstAttribute="leading" secondItem="TIH-zM-FUY" secondAttribute="trailing" constant="14" id="5tx-Y9-kP9"/>
+                            <constraint firstItem="TIH-zM-FUY" firstAttribute="top" secondItem="Pkd-z3-Z5P" secondAttribute="bottom" constant="-265" id="9Am-ue-D24"/>
+                            <constraint firstItem="y15-TJ-LwZ" firstAttribute="leading" secondItem="6mD-5Y-PZb" secondAttribute="trailing" constant="16" id="Adq-Cq-uFh"/>
+                            <constraint firstItem="Pkd-z3-Z5P" firstAttribute="top" secondItem="dSt-We-6r2" secondAttribute="bottom" constant="-304" id="Duw-Jk-s7H"/>
+                            <constraint firstItem="S98-1R-uyf" firstAttribute="top" secondItem="dSt-We-6r2" secondAttribute="bottom" constant="-3" id="IEe-fR-3ze"/>
+                            <constraint firstItem="W0U-gB-onM" firstAttribute="leading" secondItem="Pkd-z3-Z5P" secondAttribute="trailing" constant="-299" id="J5L-x5-vPe"/>
+                            <constraint firstItem="Pkd-z3-Z5P" firstAttribute="leading" secondItem="GG0-VX-sjc" secondAttribute="trailing" constant="-124" id="JGG-va-yge"/>
+                            <constraint firstItem="Pkd-z3-Z5P" firstAttribute="leading" secondItem="6mD-5Y-PZb" secondAttribute="trailing" constant="-124" id="M9Z-5A-tzr"/>
+                            <constraint firstItem="YXm-cr-8dH" firstAttribute="leading" secondItem="Rt0-QY-eZ1" secondAttribute="trailing" constant="15" id="ORt-r8-cFA"/>
+                            <constraint firstItem="gsP-yh-Yu4" firstAttribute="leading" secondItem="YXm-cr-8dH" secondAttribute="trailing" constant="14" id="QbA-gz-AQa"/>
+                            <constraint firstItem="Pkd-z3-Z5P" firstAttribute="top" secondItem="c8I-z8-BE4" secondAttribute="bottom" constant="-275" id="RRg-t8-tui"/>
+                            <constraint firstItem="y15-TJ-LwZ" firstAttribute="top" secondItem="Pkd-z3-Z5P" secondAttribute="bottom" constant="-265" id="SeV-k2-tOP"/>
+                            <constraint firstItem="gsP-yh-Yu4" firstAttribute="top" secondItem="979-8b-Pjw" secondAttribute="bottom" constant="15" id="dEz-h1-HHm"/>
+                            <constraint firstAttribute="centerX" secondItem="Pkd-z3-Z5P" secondAttribute="centerX" id="deD-us-7d9"/>
+                            <constraint firstItem="Rt0-QY-eZ1" firstAttribute="leading" secondItem="GG0-VX-sjc" secondAttribute="trailing" constant="16" id="fe2-Ko-zLZ"/>
+                            <constraint firstItem="Pkd-z3-Z5P" firstAttribute="leading" secondItem="dSt-We-6r2" secondAttribute="trailing" constant="-304" id="gD4-Dt-Pgv"/>
+                            <constraint firstItem="W0U-gB-onM" firstAttribute="top" secondItem="S98-1R-uyf" secondAttribute="bottom" constant="-3" id="gpb-e3-qdB"/>
+                            <constraint firstItem="6mD-5Y-PZb" firstAttribute="top" secondItem="Pkd-z3-Z5P" secondAttribute="bottom" constant="-265" id="ha2-A3-RTS"/>
+                            <constraint firstItem="GG0-VX-sjc" firstAttribute="top" secondItem="6mD-5Y-PZb" secondAttribute="bottom" constant="15" id="iD8-gt-VGf"/>
+                            <constraint firstItem="Rt0-QY-eZ1" firstAttribute="top" secondItem="Pkd-z3-Z5P" secondAttribute="bottom" constant="-190" id="iu3-KK-34V"/>
+                            <constraint firstItem="2Uu-j0-3tA" firstAttribute="top" secondItem="Pkd-z3-Z5P" secondAttribute="bottom" constant="-49" id="jrR-px-bI0"/>
+                            <constraint firstItem="S98-1R-uyf" firstAttribute="leading" secondItem="Pkd-z3-Z5P" secondAttribute="trailing" constant="-258" id="mO2-BW-JdM"/>
+                            <constraint firstItem="YXm-cr-8dH" firstAttribute="top" secondItem="Pkd-z3-Z5P" secondAttribute="bottom" constant="-190" id="mZv-wt-XQu"/>
+                            <constraint firstItem="ZJ8-xD-QYW" firstAttribute="top" secondItem="Pkd-z3-Z5P" secondAttribute="bottom" constant="-100" id="me6-A1-SCs"/>
+                            <constraint firstItem="ZJ8-xD-QYW" firstAttribute="leading" secondItem="Pkd-z3-Z5P" secondAttribute="trailing" constant="-362" id="raK-Y0-tWB"/>
+                            <constraint firstItem="gsP-yh-Yu4" firstAttribute="top" secondItem="Pkd-z3-Z5P" secondAttribute="bottom" constant="-190" id="xYv-2c-s2V"/>
+                            <constraint firstItem="GG0-VX-sjc" firstAttribute="top" secondItem="Pkd-z3-Z5P" secondAttribute="bottom" constant="-190" id="yh0-su-CMk"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Social" id="KGK-4P-9Ih"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qn-hF-q0Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2776" y="538"/>
+            <point key="canvasLocation" x="935" y="-182"/>
+        </scene>
+        <!--Team Supertramp Controller-->
+        <scene sceneID="pzC-5Y-SKO">
+            <objects>
+                <viewController id="Jou-Jf-Eje" customClass="teamSupertrampController" customModule="Devin_Supertramp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PiV-ya-U3j"/>
+                        <viewControllerLayoutGuide type="bottom" id="44l-4c-m3p"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Jl-yj-Erl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="teamBackg.png" translatesAutoresizingMaskIntoConstraints="NO" id="aJp-vz-PRe">
+                                <rect key="frame" x="93" y="-5" width="414" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="600" id="WFC-as-dhe"/>
+                                    <constraint firstAttribute="width" constant="414" id="hes-W7-AUE"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="parkerIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="iEr-y7-8Bd">
+                                <rect key="frame" x="153" y="70" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="nVK-e7-I7J"/>
+                                    <constraint firstAttribute="width" constant="80" id="v8q-nH-Yej"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="parkerIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="gZQ-ov-rVj">
+                                <rect key="frame" x="150" y="221" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="84u-PM-C1v"/>
+                                    <constraint firstAttribute="height" constant="80" id="Lyv-kr-de0"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dakotaIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xu1-72-TYR">
+                                <rect key="frame" x="150" y="377" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="2Yg-Ub-Ieb"/>
+                                    <constraint firstAttribute="height" constant="80" id="Fmu-5Q-dJ4"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cam-mz-voy">
+                                <rect key="frame" x="307" y="79" width="88" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="bXD-Ed-O9z"/>
+                                    <constraint firstAttribute="height" constant="33" id="rUV-lJ-ShA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Walbeck" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uU-5J-fcp">
+                                <rect key="frame" x="303" y="105" width="96" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="evp-le-gEh"/>
+                                    <constraint firstAttribute="height" constant="33" id="g2q-77-Lc3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dakota" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEC-zl-n8S">
+                                <rect key="frame" x="307" y="386" width="88" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="IuB-P8-Gxb"/>
+                                    <constraint firstAttribute="width" constant="88" id="TCI-qv-uCQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Walbeck" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kkf-Ze-Dl9">
+                                <rect key="frame" x="303" y="412" width="96" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="W3a-E4-0XS"/>
+                                    <constraint firstAttribute="height" constant="33" id="bJl-Ia-cbj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hogan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFx-d7-KEF">
+                                <rect key="frame" x="310" y="255" width="74" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="0S6-pK-bsD"/>
+                                    <constraint firstAttribute="height" constant="33" id="FCl-Yg-K38"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkk-ta-Alr">
+                                <rect key="frame" x="153" y="153" width="61" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="20n-eI-SCb"/>
+                                    <constraint firstAttribute="width" constant="61" id="Fmq-cU-a43"/>
+                                </constraints>
+                                <state key="normal" image="Facebook.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="parkerFB:" destination="Jou-Jf-Eje" eventType="touchUpInside" id="ZMq-b0-Ds0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HDl-zj-5Rh">
+                                <rect key="frame" x="307" y="153" width="61" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="B84-ns-1bO"/>
+                                    <constraint firstAttribute="width" constant="61" id="ja3-Vu-hkw"/>
+                                </constraints>
+                                <state key="normal" image="Instagram.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="parkerInsta:" destination="Jou-Jf-Eje" eventType="touchUpInside" id="EaU-nu-Lg7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhI-7S-egJ">
+                                <rect key="frame" x="387" y="153" width="61" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="clF-xg-V8F"/>
+                                    <constraint firstAttribute="height" constant="60" id="zFZ-3B-6HL"/>
+                                </constraints>
+                                <state key="normal" image="Google +.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="parkerGoogle:" destination="Jou-Jf-Eje" eventType="touchUpInside" id="Z7f-FF-LNX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WkB-Rl-TH7">
+                                <rect key="frame" x="153" y="304" width="61" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="raU-ci-rAs"/>
+                                    <constraint firstAttribute="height" constant="60" id="tmw-l5-wqx"/>
+                                </constraints>
+                                <state key="normal" image="Facebook.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="carterFB:" destination="Jou-Jf-Eje" eventType="touchUpInside" id="tre-bn-6o5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tE2-N3-EtV">
+                                <rect key="frame" x="230" y="304" width="61" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="yPf-Ky-gam"/>
+                                    <constraint firstAttribute="height" constant="60" id="yVx-ZJ-aWc"/>
+                                </constraints>
+                                <state key="normal" image="Twitter.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="carterTwitter:" destination="Jou-Jf-Eje" eventType="touchUpInside" id="tYK-RE-IJL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOS-h5-oFU">
+                                <rect key="frame" x="307" y="304" width="61" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="AIb-qW-e8d"/>
+                                    <constraint firstAttribute="width" constant="61" id="d8x-a2-fO3"/>
+                                </constraints>
+                                <state key="normal" image="Instagram.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="carterInsta:" destination="Jou-Jf-Eje" eventType="touchUpInside" id="RHc-sG-8ea"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUA-00-0jZ">
+                                <rect key="frame" x="387" y="304" width="61" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="81R-wC-6Zc"/>
+                                    <constraint firstAttribute="height" constant="60" id="tJ4-Hr-Cpa"/>
+                                </constraints>
+                                <state key="normal" image="Google +.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="carterGoogle:" destination="Jou-Jf-Eje" eventType="touchUpInside" id="1S9-BJ-U9J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7J-OF-odB">
+                                <rect key="frame" x="153" y="461" width="61" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="2l4-KY-N4W"/>
+                                    <constraint firstAttribute="height" constant="60" id="HxJ-oS-skZ"/>
+                                </constraints>
+                                <state key="normal" image="Facebook.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dakotaFB:" destination="Jou-Jf-Eje" eventType="touchUpInside" id="fWv-LZ-Dem"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXW-j4-2M1">
+                                <rect key="frame" x="230" y="461" width="61" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="1Rs-uz-E1d"/>
+                                    <constraint firstAttribute="height" constant="60" id="L1m-XF-DFH"/>
+                                </constraints>
+                                <state key="normal" image="Twitter.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dakotaTwitter:" destination="Jou-Jf-Eje" eventType="touchUpInside" id="QBE-Jc-TnJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ZK-GE-uey">
+                                <rect key="frame" x="307" y="461" width="61" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="8sl-Xi-6eH"/>
+                                    <constraint firstAttribute="height" constant="60" id="DIW-Zp-Vdi"/>
+                                </constraints>
+                                <state key="normal" image="Instagram.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dakotaInsta:" destination="Jou-Jf-Eje" eventType="touchUpInside" id="ghL-2J-65W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oi9-j9-RsO">
+                                <rect key="frame" x="387" y="461" width="61" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="B6r-SO-A6q"/>
+                                    <constraint firstAttribute="width" constant="61" id="aEx-zf-nvb"/>
+                                </constraints>
+                                <state key="normal" image="Google +.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dakotaGoogle:" destination="Jou-Jf-Eje" eventType="touchUpInside" id="65e-em-Lch"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Suh-Yz-Jc8">
+                                <rect key="frame" x="303" y="229" width="88" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="ENi-xV-jQO"/>
+                                    <constraint firstAttribute="height" constant="33" id="Ssh-9s-a6y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1La-Vu-OYI">
+                                <rect key="frame" x="230" y="153" width="61" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="UIj-0Q-0gb"/>
+                                    <constraint firstAttribute="height" constant="60" id="XXk-e0-7iN"/>
+                                </constraints>
+                                <state key="normal" image="Twitter.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="parkerTwitter:" destination="Jou-Jf-Eje" eventType="touchUpInside" id="3gW-BL-F1L"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cam-mz-voy" firstAttribute="leading" secondItem="aJp-vz-PRe" secondAttribute="trailing" constant="-200" id="069-wf-6YK"/>
+                            <constraint firstItem="aJp-vz-PRe" firstAttribute="top" secondItem="7uU-5J-fcp" secondAttribute="bottom" constant="-143" id="3sE-eG-CsF"/>
+                            <constraint firstItem="Q7J-OF-odB" firstAttribute="top" secondItem="aJp-vz-PRe" secondAttribute="bottom" constant="-134" id="8hP-xA-WX6"/>
+                            <constraint firstItem="aJp-vz-PRe" firstAttribute="top" secondItem="MhI-7S-egJ" secondAttribute="bottom" constant="-218" id="8nn-7P-XBZ"/>
+                            <constraint firstItem="Oi9-j9-RsO" firstAttribute="leading" secondItem="aJp-vz-PRe" secondAttribute="trailing" constant="-120" id="9XY-L5-cNR"/>
+                            <constraint firstItem="Suh-Yz-Jc8" firstAttribute="leading" secondItem="aJp-vz-PRe" secondAttribute="trailing" constant="-204" id="Axr-Gc-0yK"/>
+                            <constraint firstItem="Oi9-j9-RsO" firstAttribute="leading" secondItem="5ZK-GE-uey" secondAttribute="trailing" constant="19" id="B4X-Fw-wJb"/>
+                            <constraint firstItem="aOS-h5-oFU" firstAttribute="top" secondItem="aJp-vz-PRe" secondAttribute="bottom" constant="-291" id="CaZ-Pi-MeX"/>
+                            <constraint firstItem="aJp-vz-PRe" firstAttribute="top" secondItem="PiV-ya-U3j" secondAttribute="bottom" constant="-69" id="EDY-a0-ZcU"/>
+                            <constraint firstItem="aJp-vz-PRe" firstAttribute="leading" secondItem="Xu1-72-TYR" secondAttribute="trailing" constant="-137" id="EJr-cD-QPC"/>
+                            <constraint firstItem="WkB-Rl-TH7" firstAttribute="top" secondItem="aJp-vz-PRe" secondAttribute="bottom" constant="-291" id="Eg2-Mn-21l"/>
+                            <constraint firstItem="zXW-j4-2M1" firstAttribute="top" secondItem="aJp-vz-PRe" secondAttribute="bottom" constant="-134" id="FHO-0n-0iS"/>
+                            <constraint firstItem="5ZK-GE-uey" firstAttribute="leading" secondItem="zXW-j4-2M1" secondAttribute="trailing" constant="16" id="FZh-wf-QxO"/>
+                            <constraint firstItem="MhI-7S-egJ" firstAttribute="leading" secondItem="HDl-zj-5Rh" secondAttribute="trailing" constant="19" id="FwH-DJ-5W1"/>
+                            <constraint firstItem="aJp-vz-PRe" firstAttribute="top" secondItem="iEr-y7-8Bd" secondAttribute="bottom" constant="-155" id="GL1-Ai-Syv"/>
+                            <constraint firstItem="5ZK-GE-uey" firstAttribute="top" secondItem="aJp-vz-PRe" secondAttribute="bottom" constant="-134" id="Ilv-Uw-sXl"/>
+                            <constraint firstItem="Xu1-72-TYR" firstAttribute="top" secondItem="aJp-vz-PRe" secondAttribute="bottom" constant="-218" id="Irp-kp-Py1"/>
+                            <constraint firstAttribute="centerX" secondItem="aJp-vz-PRe" secondAttribute="centerX" id="KZR-Bn-LM5"/>
+                            <constraint firstItem="aJp-vz-PRe" firstAttribute="leading" secondItem="gZQ-ov-rVj" secondAttribute="trailing" constant="-137" id="KxR-Lv-IPy"/>
+                            <constraint firstItem="tE2-N3-EtV" firstAttribute="top" secondItem="aJp-vz-PRe" secondAttribute="bottom" constant="-291" id="LkS-Ql-9WB"/>
+                            <constraint firstItem="1La-Vu-OYI" firstAttribute="leading" secondItem="gkk-ta-Alr" secondAttribute="trailing" constant="16" id="Luw-AM-g6d"/>
+                            <constraint firstItem="MUA-00-0jZ" firstAttribute="top" secondItem="aJp-vz-PRe" secondAttribute="bottom" constant="-291" id="MQ3-Ry-E1g"/>
+                            <constraint firstItem="aJp-vz-PRe" firstAttribute="leading" secondItem="gkk-ta-Alr" secondAttribute="trailing" constant="-121" id="MVA-nJ-TZ7"/>
+                            <constraint firstItem="aJp-vz-PRe" firstAttribute="top" secondItem="Cam-mz-voy" secondAttribute="bottom" constant="-117" id="Suo-2T-SvT"/>
+                            <constraint firstItem="aJp-vz-PRe" firstAttribute="top" secondItem="gkk-ta-Alr" secondAttribute="bottom" constant="-218" id="VuQ-2q-iLM"/>
+                            <constraint firstItem="tE2-N3-EtV" firstAttribute="leading" secondItem="WkB-Rl-TH7" secondAttribute="trailing" constant="16" id="WIi-e7-ngq"/>
+                            <constraint firstItem="Kkf-Ze-Dl9" firstAttribute="top" secondItem="eEC-zl-n8S" secondAttribute="bottom" constant="-7" id="WcO-RG-YwP"/>
+                            <constraint firstItem="eEC-zl-n8S" firstAttribute="top" secondItem="aJp-vz-PRe" secondAttribute="bottom" constant="-209" id="XP5-kT-S3D"/>
+                            <constraint firstItem="Oi9-j9-RsO" firstAttribute="top" secondItem="aJp-vz-PRe" secondAttribute="bottom" constant="-134" id="Z4N-e2-26v"/>
+                            <constraint firstItem="MhI-7S-egJ" firstAttribute="leading" secondItem="aJp-vz-PRe" secondAttribute="trailing" constant="-120" id="ZiA-nV-Uud"/>
+                            <constraint firstItem="aJp-vz-PRe" firstAttribute="top" secondItem="gZQ-ov-rVj" secondAttribute="bottom" constant="-306" id="atx-6g-eGm"/>
+                            <constraint firstItem="MUA-00-0jZ" firstAttribute="leading" secondItem="aOS-h5-oFU" secondAttribute="trailing" constant="19" id="dNv-DV-eNh"/>
+                            <constraint firstItem="aJp-vz-PRe" firstAttribute="leading" secondItem="iEr-y7-8Bd" secondAttribute="trailing" constant="-140" id="dXT-Vv-M6C"/>
+                            <constraint firstItem="7uU-5J-fcp" firstAttribute="leading" secondItem="aJp-vz-PRe" secondAttribute="trailing" constant="-204" id="eLt-Hj-Hdy"/>
+                            <constraint firstItem="aJp-vz-PRe" firstAttribute="leading" secondItem="WkB-Rl-TH7" secondAttribute="trailing" constant="-121" id="efp-aJ-0ew"/>
+                            <constraint firstItem="eEC-zl-n8S" firstAttribute="leading" secondItem="aJp-vz-PRe" secondAttribute="trailing" constant="-200" id="gUx-lK-w1P"/>
+                            <constraint firstItem="aOS-h5-oFU" firstAttribute="leading" secondItem="tE2-N3-EtV" secondAttribute="trailing" constant="16" id="hFf-d0-XTb"/>
+                            <constraint firstItem="aJp-vz-PRe" firstAttribute="top" secondItem="HDl-zj-5Rh" secondAttribute="bottom" constant="-218" id="iCR-1u-JPa"/>
+                            <constraint firstItem="aJp-vz-PRe" firstAttribute="top" secondItem="jFx-d7-KEF" secondAttribute="bottom" constant="-293" id="irr-bT-hLA"/>
+                            <constraint firstItem="jFx-d7-KEF" firstAttribute="leading" secondItem="aJp-vz-PRe" secondAttribute="trailing" constant="-197" id="mNM-Mj-wZp"/>
+                            <constraint firstItem="MUA-00-0jZ" firstAttribute="leading" secondItem="aJp-vz-PRe" secondAttribute="trailing" constant="-120" id="nhG-l5-YFN"/>
+                            <constraint firstItem="aJp-vz-PRe" firstAttribute="top" secondItem="1La-Vu-OYI" secondAttribute="bottom" constant="-218" id="osb-wT-kZS"/>
+                            <constraint firstItem="aJp-vz-PRe" firstAttribute="top" secondItem="Suh-Yz-Jc8" secondAttribute="bottom" constant="-267" id="qS2-ZV-1Xh"/>
+                            <constraint firstItem="HDl-zj-5Rh" firstAttribute="leading" secondItem="1La-Vu-OYI" secondAttribute="trailing" constant="16" id="uuf-FR-QbX"/>
+                            <constraint firstItem="zXW-j4-2M1" firstAttribute="leading" secondItem="Q7J-OF-odB" secondAttribute="trailing" constant="16" id="vdc-GY-Wze"/>
+                            <constraint firstItem="Kkf-Ze-Dl9" firstAttribute="leading" secondItem="aJp-vz-PRe" secondAttribute="trailing" constant="-204" id="vf4-qJ-Kj7"/>
+                            <constraint firstItem="aJp-vz-PRe" firstAttribute="leading" secondItem="Q7J-OF-odB" secondAttribute="trailing" constant="-121" id="xaS-dz-QcZ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rru-fM-TRR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1614" y="-182"/>
         </scene>
         <!--Videos-->
         <scene sceneID="LFe-eu-FRt">
@@ -297,12 +700,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fvh-hb-p3C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2002" y="-178"/>
+            <point key="canvasLocation" x="146" y="-1082"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Controller-->
         <scene sceneID="Tpa-HF-vKS">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="xON-8g-DaR" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="xON-8g-DaR" customClass="TabController" customModule="Devin_Supertramp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Cj0-jR-Oyf">
@@ -317,7 +720,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FdI-Kn-zVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1132" y="57"/>
+            <point key="canvasLocation" x="-876" y="-719"/>
         </scene>
         <!--Social-->
         <scene sceneID="95J-07-sxs">
@@ -340,7 +743,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zC0-sX-o6J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2002" y="538"/>
+            <point key="canvasLocation" x="106" y="-182"/>
         </scene>
     </scenes>
     <resources>
@@ -358,6 +761,9 @@
         <image name="TwitterBottomIcon.png" width="70" height="70"/>
         <image name="Youtube.png" width="122" height="120"/>
         <image name="bottomBlur.png" width="828" height="80"/>
-        <image name="socialBack@0.5x.png" width="320" height="568"/>
+        <image name="dakotaIcon.png" width="160" height="160"/>
+        <image name="parkerIcon.png" width="160" height="160"/>
+        <image name="socialBg.png" width="828" height="1472"/>
+        <image name="teamBackg.png" width="828" height="1472"/>
     </resources>
 </document>

@@ -11,6 +11,7 @@ import Social
 
 let reuseIdentifier = "VidCell"
 
+
 class VideosController: UICollectionViewController, YTPlayerViewDelegate {
     
     var shareView = UIView()
@@ -27,16 +28,17 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
     var changingWidth = CGFloat()
 
     
-    //share view that appears when video ends/done button pressed
    
     
     @IBOutlet weak var mediaPlayer: YTPlayerView!
-           
-
+    
     //view did load function
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
+        
+        canRotate = false
+        
         let screenSize: CGRect = UIScreen.mainScreen().bounds
         let screenWidth = screenSize.width;
         let screenHeight = screenSize.height;
@@ -97,7 +99,8 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
     
     
     
-    // MARK: UICollectionViewDataSource
+    
+     // MARK: UICollectionViewDataSource
     
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         //#warning Incomplete method implementation -- Return the number of sections
@@ -153,6 +156,7 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
             println(sharing)
             
         }
+        
     }
     //This function handles everything that happens when the mediaplayer changes states
     func playerView(playerView: YTPlayerView!, didChangeToState state: YTPlayerState) {
@@ -162,11 +166,12 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
         case kYTPlayerStatePaused.value:
             println("playerView is paused/done was pressed")
             self.mediaPlayer.hidden = true
+            canRotate = false
             
             
         case kYTPlayerStatePlaying.value:
             println("playerView is playing")
-            
+            canRotate = true
             if self.activityIndicator.isAnimating(){
             self.activityIndicator.stopAnimating()
             }
@@ -190,7 +195,6 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
             self.bufferView.backgroundColor = UIColor.grayColor().colorWithAlphaComponent(0.6)
             self.view.addSubview(bufferView)
             
-            
             self.activityIndicator.frame = CGRectMake(0, 0, 120, 120)
             self.activityIndicator.center = self.view.center
             self.activityIndicator.hidesWhenStopped = true
@@ -212,6 +216,7 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
     
     func playerViewDidBecomeReady(playerView: YTPlayerView!) {
         self.mediaPlayer.playVideo()
+        canRotate = true
     }
     
     //social sharing code
@@ -227,6 +232,7 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
         
         
         self.presentViewController(twitterShare, animated: true, completion: nil)
+        
     }
     
     @IBAction func facebookShare(sender: AnyObject) {
@@ -249,7 +255,7 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
     @IBAction func emailShare(sender: AnyObject) {
         println("shared to email")
         println(sharedId)
-        
+    
         var address = " "
         var subject = "Check out this Awesome Video!"
         var body =  "www.youtube.com/watch?v=\(sharedId)"
@@ -258,7 +264,7 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
         var url = NSURL(string: path.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)
         
         UIApplication.sharedApplication().openURL(url!)
-        
+    
     }
     
     // MARK: UICollectionViewDelegate

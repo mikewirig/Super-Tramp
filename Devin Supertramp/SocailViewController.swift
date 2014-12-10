@@ -10,9 +10,18 @@ import UIKit
 
 class SocailViewController: UIViewController {
     
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    override func supportedInterfaceOrientations() -> Int {
+        return UIInterfaceOrientationMask.Portrait.rawValue.hashValue
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
                 // Do any additional setup after loading the view.
+        canRotate = false
     }
    
     override func didReceiveMemoryWarning() {
