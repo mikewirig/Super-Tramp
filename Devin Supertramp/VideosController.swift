@@ -12,7 +12,7 @@ import Social
 let reuseIdentifier = "VidCell"
 
 
-class VideosController: UICollectionViewController, YTPlayerViewDelegate {
+class VideosController: UICollectionViewController {
     
     var shareView = UIView()
     var imageUrls = [String]()
@@ -30,7 +30,7 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
     
    
     
-    @IBOutlet weak var mediaPlayer: YTPlayerView!
+    
     
     //view did load function
     override func viewDidLoad() {
@@ -46,8 +46,6 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
         self.changingWidth = screenWidth
         
         sharing = false
-        self.mediaPlayer.delegate = self
-        self.mediaPlayer.hidden = true
         self.updateView()
     }
     
@@ -142,8 +140,6 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
         if sharing == false {
             
             sharedId = self.youtubeIds[indexPath.row]
-            self.mediaPlayer.hidden = false
-            self.mediaPlayer.loadWithVideoId(self.youtubeIds[indexPath.row])
             println("cell \(indexPath.row)")
             println(self.youtubeIds[indexPath.row])
             
@@ -156,74 +152,17 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
             println(sharing)
             
         }
-        
     }
-    //This function handles everything that happens when the mediaplayer changes states
-    func playerView(playerView: YTPlayerView!, didChangeToState state: YTPlayerState) {
-        println("Changed State")
-        
-        switch state.value {
-        case kYTPlayerStatePaused.value:
-            println("playerView is paused/done was pressed")
-            self.mediaPlayer.hidden = true
-            canRotate = false
-            
-            
-        case kYTPlayerStatePlaying.value:
-            println("playerView is playing")
-            canRotate = true
-            if self.activityIndicator.isAnimating(){
-            self.activityIndicator.stopAnimating()
-            }
-            
-            if UIApplication.sharedApplication().isIgnoringInteractionEvents() {
-            UIApplication.sharedApplication().endIgnoringInteractionEvents()
-            }
-            self.mediaPlayer.hidden = false
-
-            
-            self.bufferView.hidden = true
-        case kYTPlayerStateEnded.value:
-            println("playerView ended")
-            
-        case kYTPlayerStateBuffering.value:
-            println("playerView is buffering")
-            
-            self.bufferView.hidden = false
-            self.bufferView.frame = self.view.frame
-            self.bufferView.center = self.view.center
-            self.bufferView.backgroundColor = UIColor.grayColor().colorWithAlphaComponent(0.6)
-            self.view.addSubview(bufferView)
-            
-            self.activityIndicator.frame = CGRectMake(0, 0, 120, 120)
-            self.activityIndicator.center = self.view.center
-            self.activityIndicator.hidesWhenStopped = true
-            self.activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.WhiteLarge
-            self.bufferView.addSubview(activityIndicator)
-            self.activityIndicator.startAnimating()
-            UIApplication.sharedApplication().beginIgnoringInteractionEvents()
-            
-            
-        case kYTPlayerStateUnstarted.value:
-            println("playerView is unstarted")
-        
-        default:
-            println("playerView State changed")
-
-        }
-        
-    }
-    
-    func playerViewDidBecomeReady(playerView: YTPlayerView!) {
-        self.mediaPlayer.playVideo()
-        canRotate = true
-    }
-    
-    //social sharing code
+//       //social sharing code
     
     @IBAction func twitterShare(sender: AnyObject) {
         println("shared \(sharedTitle) to twitter")
+        self.twitterPerformShare()
         
+    }
+    
+    func twitterPerformShare(){
+       
         var twitterShare : SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
         
         var sharedUrl = NSURL(string: "www.youtube.com/watch?v=" + sharedId)
@@ -232,12 +171,17 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
         
         
         self.presentViewController(twitterShare, animated: true, completion: nil)
-        
+
     }
     
     @IBAction func facebookShare(sender: AnyObject) {
         println("shared \(sharedTitle) to facebook")
+        println(sharedId)
         
+        self.performFBShare()
+    }
+    
+    func performFBShare() {
         
         var fbShare : SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
         
@@ -246,8 +190,6 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
         fbShare.setInitialText("Check out this sweet video! #teamsupertramp")
         fbShare.addURL(sharedUrl)
         
-        
-        
         self.presentViewController(fbShare, animated: true, completion: nil)
 
     }
@@ -255,7 +197,13 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
     @IBAction func emailShare(sender: AnyObject) {
         println("shared to email")
         println(sharedId)
+        
+        self.performEmailShare()
+        
+        }
     
+    func performEmailShare() {
+       
         var address = " "
         var subject = "Check out this Awesome Video!"
         var body =  "www.youtube.com/watch?v=\(sharedId)"
@@ -264,10 +212,10 @@ class VideosController: UICollectionViewController, YTPlayerViewDelegate {
         var url = NSURL(string: path.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)
         
         UIApplication.sharedApplication().openURL(url!)
-    
+        
     }
     
-    // MARK: UICollectionViewDelegate
+   
     
     
         

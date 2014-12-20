@@ -23,12 +23,6 @@
                         <view key="backgroundView" contentMode="scaleToFill" fixedFrame="YES" id="Ak5-69-HEL">
                             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tto-Ro-jL7" customClass="YTPlayerView">
-                                    <rect key="frame" x="150" y="150" width="300" height="300"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </view>
-                            </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <gestureRecognizers/>
                         </view>
@@ -41,7 +35,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s4t-E7-8Kc">
-                                            <rect key="frame" x="0.0" y="4" width="414" height="313"/>
+                                            <rect key="frame" x="0.0" y="2" width="414" height="313"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="414" id="4kf-eS-aPu"/>
                                                 <constraint firstAttribute="height" constant="311" id="TN0-kl-fhL"/>
@@ -132,6 +126,7 @@
                                     <outlet property="releaseDateLabel" destination="Bfz-dy-6xu" id="QZu-WK-zAx"/>
                                     <outlet property="thumbnailImageView" destination="s4t-E7-8Kc" id="xUC-Mf-x3D"/>
                                     <outlet property="titleLabel" destination="UdU-40-4xu" id="rBi-UX-6UE"/>
+                                    <segue destination="rmt-00-zrF" kind="presentation" modalTransitionStyle="coverVertical" id="uKj-qe-Yo6"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -142,13 +137,70 @@
                     </collectionView>
                     <navigationItem key="navigationItem" title="Videos" id="6eq-Hm-EHw" colorLabel="IBBuiltInLabel-Blue"/>
                     <keyCommands/>
-                    <connections>
-                        <outlet property="mediaPlayer" destination="Tto-Ro-jL7" id="wld-hg-VYV"/>
-                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbP-FV-I0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="987" y="-1082"/>
+        </scene>
+        <!--Player View Controller-->
+        <scene sceneID="Uvb-VV-2N4">
+            <objects>
+                <viewController id="rmt-00-zrF" customClass="PlayerViewController" customModule="Devin_Supertramp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eDq-0F-tEb"/>
+                        <viewControllerLayoutGuide type="bottom" id="jDQ-3w-mMt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="83e-Kb-dhy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7h3-qU-jxQ" customClass="YTPlayerView">
+                                <rect key="frame" x="300" y="243" width="300" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loadingView.png" translatesAutoresizingMaskIntoConstraints="NO" id="hDk-hZ-DPd">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="600" id="0Fv-9c-t8G"/>
+                                    <constraint firstAttribute="width" constant="600" id="EGB-EF-5HV"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvA-b5-gyf">
+                                <rect key="frame" x="262" y="388" width="77" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="IOg-lQ-qjU"/>
+                                    <constraint firstAttribute="width" constant="77" id="T9d-Ha-Ds5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Devin.png" translatesAutoresizingMaskIntoConstraints="NO" id="yeI-Yi-v9u">
+                                <rect key="frame" x="220" y="220" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="ae6-Lo-5h6"/>
+                                    <constraint firstAttribute="height" constant="160" id="b2y-GS-R8r"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="vvA-b5-gyf" secondAttribute="centerX" id="43M-rz-1BK"/>
+                            <constraint firstAttribute="centerX" secondItem="hDk-hZ-DPd" secondAttribute="centerX" id="Vou-l5-tyq"/>
+                            <constraint firstAttribute="centerY" secondItem="yeI-Yi-v9u" secondAttribute="centerY" id="agv-bV-tEs"/>
+                            <constraint firstAttribute="centerY" secondItem="hDk-hZ-DPd" secondAttribute="centerY" id="cLm-rv-W5M"/>
+                            <constraint firstAttribute="centerX" secondItem="yeI-Yi-v9u" secondAttribute="centerX" id="mRD-T7-HIY"/>
+                            <constraint firstItem="vvA-b5-gyf" firstAttribute="top" secondItem="yeI-Yi-v9u" secondAttribute="bottom" constant="8" id="r4B-MI-nG7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loadingImage" destination="yeI-Yi-v9u" id="dd5-VT-ohO"/>
+                        <outlet property="mediaPlayer" destination="7h3-qU-jxQ" id="plO-Qf-GGM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x1t-1H-U5A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1750" y="-1082"/>
         </scene>
         <!--Social-->
         <scene sceneID="tfT-uj-rvo">
@@ -363,6 +415,10 @@
                     <navigationItem key="navigationItem" title="Social" id="KGK-4P-9Ih"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qn-hF-q0Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="uWm-lr-AeZ">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </scrollView>
             </objects>
             <point key="canvasLocation" x="935" y="-182"/>
         </scene>
@@ -688,7 +744,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="afv-Gz-NUg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" cyan="1" magenta="0.1258996212121212" yellow="0.0" black="0.44041193181818189" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
@@ -711,7 +768,9 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Cj0-jR-Oyf">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.062745098039215685" green="0.23137254901960785" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.070588235294117646" green="0.26666666666666666" blue="0.3843137254901961" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="Z1V-uC-7U4" kind="relationship" relationship="viewControllers" id="bmb-55-uuP"/>
@@ -731,7 +790,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rr6-lT-xCt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.070588235294117646" green="0.26666666666666666" blue="0.3843137254901961" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
@@ -762,6 +822,7 @@
         <image name="Youtube.png" width="122" height="120"/>
         <image name="bottomBlur.png" width="828" height="80"/>
         <image name="dakotaIcon.png" width="160" height="160"/>
+        <image name="loadingView.png" width="1200" height="1200"/>
         <image name="parkerIcon.png" width="160" height="160"/>
         <image name="socialBg.png" width="828" height="1472"/>
         <image name="teamBackg.png" width="828" height="1472"/>

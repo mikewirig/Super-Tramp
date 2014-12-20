@@ -39,6 +39,7 @@
 		F510EABF19CB721600C946B9 /* VideosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F510EABE19CB721600C946B9 /* VideosController.swift */; };
 		F53A051A1A1E7AF800D7E755 /* Rectangle 16@0.5x.png in Resources */ = {isa = PBXBuildFile; fileRef = F53A05181A1E7AF800D7E755 /* Rectangle 16@0.5x.png */; };
 		F53A051B1A1E7AF800D7E755 /* Rectangle 16.png in Resources */ = {isa = PBXBuildFile; fileRef = F53A05191A1E7AF800D7E755 /* Rectangle 16.png */; };
+		F5413EFE1A3A829F000519EA /* VideoSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5413EFD1A3A829F000519EA /* VideoSearchBar.swift */; };
 		F55DE9F71A3283B0000C5015 /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DE9F61A3283B0000C5015 /* TabController.swift */; };
 		F5711DB019F568240041CBA9 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5711DAF19F568240041CBA9 /* Social.framework */; };
 		F59922F01A377D6300F4D9A3 /* socialBg@0.5x.png in Resources */ = {isa = PBXBuildFile; fileRef = F59922EE1A377D6300F4D9A3 /* socialBg@0.5x.png */; };
@@ -50,6 +51,9 @@
 		F59923001A37980E00F4D9A3 /* teamBackg@0.5x.png in Resources */ = {isa = PBXBuildFile; fileRef = F59922FE1A37980E00F4D9A3 /* teamBackg@0.5x.png */; };
 		F59923011A37980E00F4D9A3 /* teamBackg.png in Resources */ = {isa = PBXBuildFile; fileRef = F59922FF1A37980E00F4D9A3 /* teamBackg.png */; };
 		F59923031A37CD1300F4D9A3 /* teamSupertrampController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59923021A37CD1300F4D9A3 /* teamSupertrampController.swift */; };
+		F59923051A3A5A3900F4D9A3 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59923041A3A5A3900F4D9A3 /* PlayerViewController.swift */; };
+		F59923081A3A63CF00F4D9A3 /* loadingView@0.5x.png in Resources */ = {isa = PBXBuildFile; fileRef = F59923061A3A63CF00F4D9A3 /* loadingView@0.5x.png */; };
+		F59923091A3A63CF00F4D9A3 /* loadingView.png in Resources */ = {isa = PBXBuildFile; fileRef = F59923071A3A63CF00F4D9A3 /* loadingView.png */; };
 		F59A69C91A094F8E00505817 /* SocailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59A69C81A094F8E00505817 /* SocailViewController.swift */; };
 		F5B44C451A2E63AA00BCBF89 /* ChronoIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F5B44C431A2E63AA00BCBF89 /* ChronoIcon.png */; };
 		F5B44C461A2E63AA00BCBF89 /* ChronoIcon@0.5x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5B44C441A2E63AA00BCBF89 /* ChronoIcon@0.5x.png */; };
@@ -124,6 +128,7 @@
 		F510EABE19CB721600C946B9 /* VideosController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideosController.swift; sourceTree = "<group>"; };
 		F53A05181A1E7AF800D7E755 /* Rectangle 16@0.5x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rectangle 16@0.5x.png"; sourceTree = "<group>"; };
 		F53A05191A1E7AF800D7E755 /* Rectangle 16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rectangle 16.png"; sourceTree = "<group>"; };
+		F5413EFD1A3A829F000519EA /* VideoSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoSearchBar.swift; sourceTree = "<group>"; };
 		F55DE9F61A3283B0000C5015 /* TabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
 		F5711DAF19F568240041CBA9 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		F59922EE1A377D6300F4D9A3 /* socialBg@0.5x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "socialBg@0.5x.png"; sourceTree = "<group>"; };
@@ -135,6 +140,9 @@
 		F59922FE1A37980E00F4D9A3 /* teamBackg@0.5x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "teamBackg@0.5x.png"; sourceTree = "<group>"; };
 		F59922FF1A37980E00F4D9A3 /* teamBackg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teamBackg.png; sourceTree = "<group>"; };
 		F59923021A37CD1300F4D9A3 /* teamSupertrampController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = teamSupertrampController.swift; sourceTree = "<group>"; };
+		F59923041A3A5A3900F4D9A3 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		F59923061A3A63CF00F4D9A3 /* loadingView@0.5x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loadingView@0.5x.png"; sourceTree = "<group>"; };
+		F59923071A3A63CF00F4D9A3 /* loadingView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loadingView.png; sourceTree = "<group>"; };
 		F59A69C81A094F8E00505817 /* SocailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocailViewController.swift; sourceTree = "<group>"; };
 		F5B44C431A2E63AA00BCBF89 /* ChronoIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChronoIcon.png; sourceTree = "<group>"; };
 		F5B44C441A2E63AA00BCBF89 /* ChronoIcon@0.5x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ChronoIcon@0.5x.png"; sourceTree = "<group>"; };
@@ -211,6 +219,8 @@
 				F5D8C9D41A11CA2F004FDA7E /* socialBack@0.5x.png */,
 				F50FC1B11A24164F0002CA76 /* TwitterBottomIcon@0.5x.png */,
 				F50FC1B21A24164F0002CA76 /* TwitterBottomIcon.png */,
+				F59923061A3A63CF00F4D9A3 /* loadingView@0.5x.png */,
+				F59923071A3A63CF00F4D9A3 /* loadingView.png */,
 				F50FC1B51A24164F0002CA76 /* FBbottomIcon@0.5x.png */,
 				F50FC1B61A24164F0002CA76 /* FBbottomIcon.png */,
 				F50FC1B71A24164F0002CA76 /* EmailBottomIcon@0.5x.png */,
@@ -296,9 +306,11 @@
 			children = (
 				F510EA9519CB6A3600C946B9 /* AppDelegate.swift */,
 				F510EABE19CB721600C946B9 /* VideosController.swift */,
-				F59A69C81A094F8E00505817 /* SocailViewController.swift */,
 				F50E9BB219D2167800B3E0D7 /* VidCell.swift */,
+				F59923041A3A5A3900F4D9A3 /* PlayerViewController.swift */,
+				F59A69C81A094F8E00505817 /* SocailViewController.swift */,
 				F59923021A37CD1300F4D9A3 /* teamSupertrampController.swift */,
+				F5413EFD1A3A829F000519EA /* VideoSearchBar.swift */,
 				F55DE9F61A3283B0000C5015 /* TabController.swift */,
 				F510EA9C19CB6A3600C946B9 /* Main.storyboard */,
 				F50E9BEA19D3303300B3E0D7 /* Devin Supertramp-Bridging-Header.h */,
@@ -420,6 +432,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5D8C9D11A11C9D6004FDA7E /* Blogger@0.5x.png in Resources */,
+				F59923081A3A63CF00F4D9A3 /* loadingView@0.5x.png in Resources */,
 				F50FC1C71A2416F40002CA76 /* bottomBlur@0.5x.png in Resources */,
 				F5D8C9C81A11C9D6004FDA7E /* Mail.png in Resources */,
 				F510EA9E19CB6A3600C946B9 /* Main.storyboard in Resources */,
@@ -458,6 +471,7 @@
 				F53A051A1A1E7AF800D7E755 /* Rectangle 16@0.5x.png in Resources */,
 				F5D8C9B81A11C9A9004FDA7E /* Youtube.png in Resources */,
 				F50FC1BF1A24164F0002CA76 /* EmailBottomIcon@0.5x.png in Resources */,
+				F59923091A3A63CF00F4D9A3 /* loadingView.png in Resources */,
 				F50FC1C81A2416F40002CA76 /* bottomBlur.png in Resources */,
 				F5D8C9CA1A11C9D6004FDA7E /* Instagram.png in Resources */,
 			);
@@ -510,7 +524,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5413EFE1A3A829F000519EA /* VideoSearchBar.swift in Sources */,
 				F55DE9F71A3283B0000C5015 /* TabController.swift in Sources */,
+				F59923051A3A5A3900F4D9A3 /* PlayerViewController.swift in Sources */,
 				F50E9BB319D2167800B3E0D7 /* VidCell.swift in Sources */,
 				F510EA9619CB6A3600C946B9 /* AppDelegate.swift in Sources */,
 				F510EABF19CB721600C946B9 /* VideosController.swift in Sources */,
